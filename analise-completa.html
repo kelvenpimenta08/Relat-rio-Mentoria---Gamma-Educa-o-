@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentoria PYRAMID · Análise Completa · Gamma Educação</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 104 112'%3E%3Ccircle cx='54' cy='46' r='37' fill='none' stroke='%23F26F21' stroke-width='10.5' stroke-linecap='round' stroke-dasharray='206 27' transform='rotate(128 54 46)'/%3E%3Ctext x='51' y='73' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='84' fill='%23F26F21' text-anchor='middle'%3E%CE%B3%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════════════════════════════
+   GAMMA EDUCAÇÃO · MENTORIA PYRAMID · Análise Completa
+   Identidade: NAVY #0A1140 · ORANGE #F26F21 · Poppins + JetBrains Mono
+   Formato: documento executivo longo · mapa encontro a encontro
+   ════════════════════════════════════════════════════════════════════ */
+:root{
+  --ink:#0A1140; --ink-2:#121A55; --ink-3:#1A2468;
+  --org:#F26F21; --org-d:#D85E12; --org-glow:#ffa262;
+  --navy:#1D2E87;
+  --paper:#f4f4f6; --greige:#e5e6ec; --white:#ffffff;
+  --mute:#8f94ab; --mute-d:#5d6379; --red:#e5675f;
+  --line-d:rgba(255,255,255,.13); --line-l:#dbdce4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+.mono{font-family:'JetBrains Mono',monospace}
+.spark{color:var(--org);font-style:normal}
+
+/* ── HERO ── */
+.hero{background:var(--ink);color:#fff;padding:clamp(40px,6vw,84px) clamp(22px,6vw,80px) clamp(34px,5vw,64px);position:relative;overflow:hidden}
+.hero .glow{position:absolute;width:56vw;height:56vw;right:-14vw;top:-22vw;border-radius:50%;background:radial-gradient(circle,rgba(242,111,33,.20),transparent 62%);filter:blur(18px);pointer-events:none}
+.hero .mark{position:absolute;left:-2vw;bottom:-16vw;font-size:34vw;line-height:1;color:#fff;opacity:.03;font-weight:900;font-family:'JetBrains Mono',monospace;pointer-events:none}
+.hwrap{max-width:940px;margin:0 auto;position:relative;z-index:2}
+.hero .brand{display:flex;align-items:center;gap:9px;margin-bottom:clamp(26px,4vw,44px)}
+.hero .brand svg{height:34px;width:auto}
+.hero .brand .wm{display:flex;flex-direction:column;line-height:1}
+.hero .brand .wm b{font-weight:800;font-size:18px;letter-spacing:-.6px}
+.hero .brand .wm small{font-weight:500;font-size:7.5px;letter-spacing:3.4px;opacity:.8;margin-top:2px;text-transform:lowercase}
+.hero .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:var(--org);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.hero .eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--org)}
+.hero h1{font-weight:900;font-size:clamp(2rem,6vw,4.2rem);line-height:.95;letter-spacing:-.04em;text-transform:lowercase}
+.hero h1 .b{color:var(--org)}
+.hero .sub{margin-top:16px;font-size:clamp(13px,1.5vw,16px);color:var(--mute);font-weight:500;max-width:66ch;line-height:1.6}
+.hero .sub b{color:#cfd3e2;font-weight:600}
+.hero .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.hero .tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.5px;border:1px solid rgba(242,111,33,.42);background:rgba(242,111,33,.13);color:#ffeede;border-radius:30px;padding:7px 13px}
+
+/* ── LAYOUT ── */
+.doc{max-width:940px;margin:0 auto;padding:clamp(26px,4.5vw,56px) clamp(22px,6vw,80px) clamp(60px,8vw,110px)}
+section{margin-top:clamp(38px,5.5vw,64px)}
+section:first-child{margin-top:0}
+.sec-k{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:1px;color:var(--org-d);text-transform:uppercase;display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.sec-k::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--org)}
+h2{font-size:clamp(1.35rem,2.8vw,2rem);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:14px}
+h2 em{color:var(--org-d);font-style:normal}
+h3{font-size:15px;font-weight:800;letter-spacing:-.2px;margin:22px 0 8px}
+p{font-size:13.5px;line-height:1.75;color:#2c3252;margin-bottom:12px;max-width:74ch}
+p b,li b{color:var(--ink);font-weight:700}
+.lead{font-size:15px;color:var(--ink);font-weight:500}
+
+/* sumário · índice editorial */
+.toc{background:var(--ink);border-radius:18px;padding:clamp(22px,3vw,32px) clamp(22px,3.5vw,36px);margin:18px 0 6px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+.toc::before{content:'γ';position:absolute;right:-30px;bottom:-70px;font-size:220px;line-height:1;font-family:'JetBrains Mono',monospace;font-weight:900;color:#fff;opacity:.03;pointer-events:none}
+.toc a{display:flex;align-items:baseline;gap:12px;padding:11px 0;text-decoration:none;color:#cfd3e2;font-size:12.5px;font-weight:600;letter-spacing:-.1px;border-bottom:1px solid rgba(255,255,255,.09);transition:color .2s}
+.toc a:nth-last-child(1),.toc a:nth-last-child(2){border-bottom:none}
+.toc a .t-n{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;color:var(--org);flex-shrink:0}
+.toc a .ld{flex:1;min-width:18px;border-bottom:1px dotted rgba(255,255,255,.22);transform:translateY(-4px)}
+.toc a .t-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--mute);flex-shrink:0;transition:color .2s}
+.toc a:hover{color:#fff}
+.toc a:hover .t-tag{color:var(--org-glow)}
+
+/* listas */
+ul.detail{list-style:none;display:flex;flex-direction:column;gap:8px;margin:10px 0 14px}
+ul.detail li{font-size:13px;line-height:1.6;color:#2c3252;padding-left:20px;position:relative}
+ul.detail li::before{content:'+';position:absolute;left:0;top:-1px;color:var(--org-d);font-weight:800}
+ol.seq{list-style:none;counter-reset:q;display:flex;flex-direction:column;gap:8px;margin:10px 0 14px}
+ol.seq li{font-size:13px;line-height:1.6;color:#2c3252;padding-left:30px;position:relative;counter-increment:q}
+ol.seq li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:1px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--org-d)}
+
+/* cards / notes / stats */
+.card{background:var(--white);border:1px solid var(--line-l);border-radius:16px;padding:20px 22px;box-shadow:0 1px 2px rgba(10,17,64,.03)}
+.card.accent{border-left:3px solid var(--org)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+.c-tag{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700;color:var(--org-d);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.card h4{font-size:15px;font-weight:800;letter-spacing:-.2px;margin-bottom:6px}
+.card p{font-size:12.5px;margin-bottom:0}
+.card ul.detail li{font-size:12.5px}
+.note{background:var(--white);border:1px solid var(--line-l);border-left:3px solid var(--org);border-radius:13px;padding:15px 19px;font-size:12.5px;line-height:1.65;color:var(--mute-d);margin:16px 0}
+.note b{color:var(--ink);font-weight:600}
+.note .n-k{font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:1.2px;color:var(--org-d);font-weight:700;display:block;margin-bottom:6px}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+.stat{background:var(--white);border:1px solid var(--line-l);border-radius:14px;padding:18px;border-left:3px solid var(--line-l)}
+.stat.hot{border-left-color:var(--org)}
+.stat .s-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--mute-d);font-weight:600}
+.stat .s-val{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.5px;margin-top:6px;font-variant-numeric:tabular-nums;line-height:1.05}
+.stat .s-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mute-d);margin-top:5px}
+
+/* pilar */
+.pilar{background:var(--white);border:1px solid var(--line-l);border-left:3px solid var(--org);border-radius:16px;padding:20px 22px;margin:12px 0}
+.pilar .p-n{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--org-d);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.pilar h4{font-size:16px;font-weight:800;letter-spacing:-.2px;margin-bottom:8px}
+.pilar p{font-size:12.5px;margin-bottom:8px}
+.pilar p:last-child{margin-bottom:0}
+.pilar ul.detail{margin:8px 0 0}
+.pilar ul.detail li{font-size:12.5px}
+
+/* king / citações */
+.king{background:var(--ink);color:#fff;border-radius:14px;padding:20px 24px;font-size:13px;line-height:1.7;margin:18px 0}
+.king b{color:var(--org)}
+.king .k-pre{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--org);font-weight:700;margin-bottom:8px}
+
+/* tabela */
+.tbl-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line-l);border-radius:16px;background:var(--white)}
+table{width:100%;border-collapse:collapse;min-width:640px}
+thead th{font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--mute-d);font-weight:700;text-align:left;padding:13px 16px;background:var(--greige)}
+tbody td{padding:11px 16px;font-size:12.5px;border-top:1px solid var(--line-l);font-variant-numeric:tabular-nums;vertical-align:top}
+tbody tr:hover{background:#fbf7f3}
+.bcm,.btp{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;border-radius:20px;padding:3px 9px;white-space:nowrap;display:inline-block}
+.bcm{background:rgba(242,111,33,.12);color:var(--org-d)}
+.btp{background:rgba(29,46,135,.10);color:var(--navy)}
+td.num{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;white-space:nowrap}
+
+/* fluxo */
+.flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:14px 0}
+.flow span{background:rgba(242,111,33,.12);color:var(--org-d);border:1px solid rgba(242,111,33,.35);border-radius:30px;padding:7px 13px;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;white-space:nowrap}
+.flow i{color:var(--org-d);font-style:normal;font-size:14px;font-weight:700}
+
+/* ── ENCONTROS (mapa completo) ── */
+details.enc{background:var(--white);border:1px solid var(--line-l);border-radius:16px;margin:10px 0;box-shadow:0 1px 2px rgba(10,17,64,.03);overflow:hidden}
+details.enc[open]{border-left:3px solid var(--org)}
+details.enc summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:15px 20px;flex-wrap:wrap}
+details.enc summary::-webkit-details-marker{display:none}
+details.enc summary:hover{background:#fbf7f3}
+.e-n{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--org-d);min-width:56px}
+.e-title{flex:1;min-width:220px}
+.e-title b{display:block;font-size:14px;font-weight:800;letter-spacing:-.2px;line-height:1.25}
+.e-title small{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mute-d);margin-top:3px}
+.e-dur{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;color:var(--ink)}
+.e-car{font-size:13px;color:var(--org-d);transition:transform .25s;font-weight:800}
+details.enc[open] .e-car{transform:rotate(90deg)}
+.enc-body{border-top:1px solid var(--line-l);padding:16px 20px 20px}
+.e-people{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--mute-d);line-height:1.6;margin-bottom:12px}
+.e-people b{color:var(--ink);font-weight:700}
+.eb-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.eb{min-width:0}
+.eb.full{grid-column:1/-1}
+.eb h5{font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:1.1px;color:var(--org-d);font-weight:700;margin-bottom:7px;display:flex;align-items:center;gap:7px}
+.eb h5::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--org);flex-shrink:0}
+.eb ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.eb ul li{font-size:12px;line-height:1.55;color:#2c3252;padding-left:16px;position:relative}
+.eb ul li::before{content:'+';position:absolute;left:0;top:-1px;color:var(--org-d);font-weight:800}
+.e-quotes{margin-top:14px;background:var(--paper);border:1px solid var(--line-l);border-radius:12px;padding:13px 16px}
+.e-quotes h5{font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:1.1px;color:var(--org-d);font-weight:700;margin-bottom:7px}
+.e-quotes p{font-size:12px;font-style:italic;color:var(--mute-d);margin-bottom:5px;line-height:1.6}
+.e-quotes p:last-child{margin-bottom:0}
+.e-quotes p b{font-style:normal}
+.enc-tools{display:flex;gap:8px;margin:14px 0 4px}
+.enc-tools button{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--line-l);background:var(--white);color:var(--mute-d);border-radius:20px;padding:7px 14px;cursor:pointer;transition:.2s}
+.enc-tools button:hover{border-color:var(--org);color:var(--org-d)}
+
+.foot{border-top:1px solid var(--line-l);margin-top:clamp(40px,6vw,70px);padding-top:22px;font-size:11px;color:var(--mute-d);line-height:1.7;font-family:'JetBrains Mono',monospace}
+
+@media(max-width:820px){.two{grid-template-columns:1fr}.statgrid{grid-template-columns:1fr}.toc{grid-template-columns:1fr}.eb-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.toc{grid-template-columns:1fr}}
+
+/* impressão A4 */
+@media print{
+  body{background:#fff}
+  .hero,.king,.flow span,.bcm,.btp,.stat,.pilar,.card,.note,details.enc{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .toc,.enc-tools{display:none}
+  details.enc{break-inside:avoid-page}
+  section{break-inside:auto}
+  .tbl-wrap{overflow:visible}
+  @page{size:A4;margin:13mm}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="glow"></div><div class="mark">γ</div>
+  <div class="hwrap">
+    <div class="brand">
+      <svg viewBox="0 0 104 112" aria-hidden="true">
+        <circle cx="54" cy="46" r="37" fill="none" stroke="#F26F21" stroke-width="10.5" stroke-linecap="round" stroke-dasharray="206 27" transform="rotate(128 54 46)"/>
+        <text x="51" y="73" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-weight="700" font-size="84" fill="#F26F21" text-anchor="middle">γ</text>
+      </svg>
+      <span class="wm"><b>gamma</b><small>educação</small></span>
+    </div>
+    <div class="eyebrow">análise completa · inteligência de mentoria</div>
+    <h1>mentoria <span class="b">pyramid</span></h1>
+    <p class="sub">Análise integral das <b>21 gravações (31h51)</b> das mentorias realizadas para a Pyramid Diamantados entre <b>07/05 e 24/09/2026</b> — mapa completo encontro a encontro, reconstrução do Método Caio Martins e do Método de Tráfego Pago Keepads, e o framework que os conecta.</p>
+    <div class="tags">
+      <span class="tag">MÉTODO CAIO MARTINS · 18H05</span>
+      <span class="tag">TRÁFEGO PAGO KEEPADS · 13H46</span>
+      <span class="tag">19 ENCONTROS MAPEADOS</span>
+      <span class="tag">TRANSCRIÇÕES INTEGRAIS</span>
+    </div>
+  </div>
+</header>
+
+<main class="doc">
+
+<!-- SUMÁRIO -->
+<section id="sumario">
+  <div class="sec-k">sumário</div>
+  <div class="toc">
+    <a href="#s1"><span class="t-n">01</span>Resumo Executivo<span class="ld"></span><span class="t-tag">visão geral</span></a>
+    <a href="#s2"><span class="t-n">02</span>Linha do Tempo<span class="ld"></span><span class="t-tag">21 gravações</span></a>
+    <a href="#s3"><span class="t-n">03</span>Investimento de Tempo<span class="ld"></span><span class="t-tag">31h51</span></a>
+    <a href="#s4"><span class="t-n">04</span>Mapa Completo das Mentorias<span class="ld"></span><span class="t-tag">19 encontros</span></a>
+    <a href="#s5"><span class="t-n">05</span>Mapa de Conteúdo<span class="ld"></span><span class="t-tag">9 temas</span></a>
+    <a href="#s6"><span class="t-n">06</span>Evolução da Mentoria<span class="ld"></span><span class="t-tag">4 fases</span></a>
+    <a href="#s7"><span class="t-n">07</span>Método Caio Martins<span class="ld"></span><span class="t-tag">5 pilares</span></a>
+    <a href="#s8"><span class="t-n">08</span>Método de Tráfego Pago<span class="ld"></span><span class="t-tag">6 pilares</span></a>
+    <a href="#s9"><span class="t-n">09</span>Conexão entre os Métodos<span class="ld"></span><span class="t-tag">10 princípios</span></a>
+    <a href="#s10"><span class="t-n">10</span>Framework Geral PYRAMID<span class="ld"></span><span class="t-tag">ciclo de 8 passos</span></a>
+    <a href="#s11"><span class="t-n">11</span>Conclusões<span class="ld"></span><span class="t-tag">próximos passos</span></a>
+  </div>
+  <div class="note"><span class="n-k">como ler este documento · fato × interpretação</span>Toda a análise diferencia três níveis: <b>ensinado explicitamente</b> (explicado diretamente na mentoria), <b>princípio recorrente</b> (aparece em várias reuniões) e <b>interpretação estrutural</b> (organização nossa para tornar o método compreensível — sempre sinalizada). Citações entre aspas são falas literais dos mentores.</div>
+</section>
+
+<!-- 1 · RESUMO EXECUTIVO -->
+<section id="s1">
+  <div class="sec-k">/ 01 · resumo executivo</div>
+  <h2>duas mentorias, <em>uma máquina de aquisição e recompra B2B</em></h2>
+  <p class="lead">A mentoria PYRAMID é um programa duplo para a Pyramid Diamantados (maior importadora de ferramentas diamantadas do Brasil, de Gustavo Braz): <b>Caio Martins</b> — empresário do varejo de construção (Galpão Casa e Construção) — mentora estratégia de marketing, oferta e comercial em encontros mensais/quinzenais, e a <b>Keepads (Kelven Pimenta)</b> forma o gestor de tráfego interno (Bruno) em encontros semanais táticos.</p>
+  <p>As trilhas se cruzam o tempo todo: Kelven é co-mentor nas sessões do Caio desde o primeiro encontro, e Caio participa das de tráfego. Foram <b>21 gravações (19 encontros) somando 31h51</b>. No período, o canal saiu de ~50 leads qualificados/mês para o recorde de <b>182</b>, com o gargalo migrando comprovadamente da mídia para a conversão comercial — exatamente o que o método previa expor.</p>
+  <p>As principais áreas trabalhadas: calendário de campanhas partindo do produto, empacotamento de oferta, máquina de Meta e Google Ads, qualificação de leads com devolução de dados à plataforma, funil comercial com taxas e motivos de perda, execução via 4DX e IA aplicada à operação.</p>
+</section>
+
+<!-- 2 · LINHA DO TEMPO -->
+<section id="s2">
+  <div class="sec-k">/ 02 · linha do tempo</div>
+  <h2>21 gravações entre <em>07/05 e 24/09/2026</em></h2>
+  <p>Todas nomeadas "Mentoria Pyramed" (grafia usada nos títulos para Pyramid). As três gravações de 12/06 são partes de um mesmo encontro. Nenhuma outra reunião do histórico tem relação comprovada com a mentoria. O detalhe de cada encontro está na seção 04.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>#</th><th>Data</th><th>Trilha</th><th>Tema central do encontro</th><th>Duração</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>07/05</td><td><span class="bcm">Caio Martins</span></td><td>Diagnóstico de 2 anos de tráfego sem retorno · fórmula dos 5 passos</td><td class="num">0h51</td></tr>
+      <tr><td>2</td><td>03/06</td><td><span class="bcm">Caio Martins</span></td><td>Espinha dorsal: organograma, jornada, caixa de ferramentas, MCIs 4DX</td><td class="num">3h00</td></tr>
+      <tr><td>3</td><td>09/06</td><td><span class="btp">Tráfego Pago</span></td><td>Onboarding: ClickUp, Claude, método PDI, diagnóstico da conta</td><td class="num">1h20</td></tr>
+      <tr><td>4–6</td><td>12/06</td><td><span class="bcm">Caio Martins</span></td><td>Calendário anual de campanhas jun–dez (3 partes)</td><td class="num">2h06</td></tr>
+      <tr><td>7</td><td>16/06</td><td><span class="btp">Tráfego Pago</span></td><td>1º PDI: leilão, criativos, funil de métricas, verba pelo histórico</td><td class="num">1h39</td></tr>
+      <tr><td>8</td><td>19/06</td><td><span class="btp">Tráfego Pago</span></td><td>Claude aplicado ao tráfego · leitura do funil real (gargalo comercial)</td><td class="num">1h09</td></tr>
+      <tr><td>9</td><td>03/07</td><td><span class="btp">Tráfego Pago</span></td><td>ClickUp como sistema · colunas personalizadas · metas de qualificado</td><td class="num">1h20</td></tr>
+      <tr><td>10</td><td>09/07</td><td><span class="bcm">Caio Martins</span></td><td>Liderança do projeto (Vanessa) · MCI semanal · mês das feiras</td><td class="num">2h15</td></tr>
+      <tr><td>11</td><td>14/07</td><td><span class="btp">Tráfego Pago</span></td><td>Tripé quantidade-taxa-custo · públicos de vídeo · rotina do gestor</td><td class="num">1h39</td></tr>
+      <tr><td>12</td><td>28/07</td><td><span class="btp">Tráfego Pago</span></td><td>Google Ads (rede de pesquisa) · escala e LTV · meta 75 batida</td><td class="num">1h10</td></tr>
+      <tr><td>13</td><td>11/08</td><td><span class="btp">Tráfego Pago</span></td><td>Meta Ads avançado: ativos, lookalike, objetivos, nomenclatura, CQC</td><td class="num">1h36</td></tr>
+      <tr><td>14</td><td>13/08</td><td><span class="bcm">Caio Martins</span></td><td>Funil com 3 saídas · recado de vídeo · placar 4DX com LTV · pré-Black</td><td class="num">2h17</td></tr>
+      <tr><td>15</td><td>25/08</td><td><span class="btp">Tráfego Pago</span></td><td>Fórmula do lead qualificado: lead score, CQC, funil completo</td><td class="num">1h37</td></tr>
+      <tr><td>16</td><td>01/09</td><td><span class="bcm">Caio Martins</span></td><td>Diagnóstico do "lead desqualificado" · PCI · criativo cabeça/corpo/CTA</td><td class="num">1h12</td></tr>
+      <tr><td>17</td><td>03/09</td><td><span class="bcm">Caio Martins</span></td><td>Black Friday na planilha Gama Educação · conta reversa do funil</td><td class="num">2h12</td></tr>
+      <tr><td>18</td><td>08/09</td><td><span class="bcm">Caio Martins</span></td><td>Black por canal · matriz de produtos · pitch de evento · tráfego regional</td><td class="num">2h16</td></tr>
+      <tr><td>19</td><td>15/09</td><td><span class="btp">Tráfego Pago</span></td><td>Funil de métricas no Gerenciador · escala horizontal do campeão Hexa</td><td class="num">1h30</td></tr>
+      <tr><td>20</td><td>15/09</td><td><span class="bcm">Caio Martins</span></td><td>Auditoria de motivos de perda · CHA · Livro Negro das Objeções</td><td class="num">1h56</td></tr>
+      <tr><td>21</td><td>24/09</td><td><span class="btp">Tráfego Pago</span></td><td>Estratégia de evento com geolocalização · revisão do mês recorde</td><td class="num">0h46</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 3 · INVESTIMENTO DE TEMPO -->
+<section id="s3">
+  <div class="sec-k">/ 03 · investimento de tempo</div>
+  <h2>31h51 em <em>4 meses e meio</em></h2>
+  <div class="statgrid">
+    <div class="stat hot"><div class="s-lbl">Tempo total</div><div class="s-val">31h51</div><div class="s-sub">21 gravações · 19 encontros</div></div>
+    <div class="stat"><div class="s-lbl">Método Caio Martins</div><div class="s-val">18h05</div><div class="s-sub">11 gravações · média 1h38</div></div>
+    <div class="stat"><div class="s-lbl">Tráfego Pago Keepads</div><div class="s-val">13h46</div><div class="s-sub">10 gravações · média 1h23</div></div>
+  </div>
+  <p>Média geral de <b>1h31 por gravação</b>. A trilha Caio Martins concentra os encontros mais longos (sessões de até 3h, cadência mensal que vira quinzenal e depois semanal na reta da Black); a de Tráfego Pago tem cadência quase semanal. Todas as durações foram medidas pela plataforma de gravação — <b>nenhuma foi estimada</b>.</p>
+  <h3>Distribuição mensal</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Mês</th><th>Reuniões</th><th>Caio Martins</th><th>Tráfego Pago</th><th>Horas · CM</th><th>Horas · TP</th><th>Horas no mês</th></tr></thead>
+    <tbody>
+      <tr><td><b>Maio</b></td><td class="num">1</td><td><span class="bcm">1 reunião</span></td><td>—</td><td class="num">0h51</td><td class="num">—</td><td class="num">0h51</td></tr>
+      <tr><td><b>Junho</b></td><td class="num">5</td><td><span class="bcm">2 reuniões</span></td><td><span class="btp">3 reuniões</span></td><td class="num">5h06</td><td class="num">4h08</td><td class="num">9h14</td></tr>
+      <tr><td><b>Julho</b></td><td class="num">4</td><td><span class="bcm">1 reunião</span></td><td><span class="btp">3 reuniões</span></td><td class="num">2h15</td><td class="num">4h09</td><td class="num">6h24</td></tr>
+      <tr><td><b>Agosto</b></td><td class="num">3</td><td><span class="bcm">1 reunião</span></td><td><span class="btp">2 reuniões</span></td><td class="num">2h17</td><td class="num">3h13</td><td class="num">5h30</td></tr>
+      <tr><td><b>Setembro</b></td><td class="num">6</td><td><span class="bcm">4 reuniões</span></td><td><span class="btp">2 reuniões</span></td><td class="num">7h36</td><td class="num">2h16</td><td class="num">9h52</td></tr>
+      <tr style="background:var(--greige);font-weight:800"><td><b>Total</b></td><td class="num"><b>19</b></td><td><b>9 reuniões</b></td><td><b>10 reuniões</b></td><td class="num"><b>18h05</b></td><td class="num"><b>13h46</b></td><td class="num"><b>31h51</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><span class="n-k">leitura da distribuição</span>Contagem por <b>reunião</b> (o encontro de 12/06 foi gravado em 3 partes e conta como 1; por gravação, são 21). <b>Junho</b> foi o mês de fundação (calendário anual + onboarding do tráfego) e <b>setembro</b> o mais intenso — 6 reuniões e 9h52, puxadas pela trilha Caio Martins na preparação da Black Friday (4 reuniões, 7h36). A trilha de tráfego mantém cadência constante de 2–3 reuniões/mês, mais curtas.</div>
+</section>
+
+<!-- 4 · MAPA COMPLETO -->
+<section id="s4">
+  <div class="sec-k">/ 04 · mapa completo das mentorias</div>
+  <h2>os 19 encontros, <em>um a um</em></h2>
+  <p>Cada encontro abaixo traz participantes, tema, principais ensinamentos, processos e frameworks apresentados, decisões, tarefas e próximos passos — extraídos da leitura integral das transcrições. Clique em um encontro para abrir o detalhe.</p>
+  <div class="note"><span class="n-k">nota sobre os participantes</span>Os rótulos de falante das gravações contêm trocas de conta: <b>Caio Martins aparece como "Galpão Casa e Construção"</b> (nome da loja dele) e alguns rótulos agregam falas de mais de uma pessoa da Pyramid. Os participantes listados foram identificados <b>pelo conteúdo das falas</b>.</div>
+  <div class="enc-tools"><button type="button" onclick="document.querySelectorAll('details.enc').forEach(d=>d.open=true)">abrir todos</button><button type="button" onclick="document.querySelectorAll('details.enc').forEach(d=>d.open=false)">fechar todos</button></div>
+
+  <details class="enc">
+    <summary><span class="e-n">E01</span><span class="e-title"><b>Diagnóstico inicial e a fórmula dos 5 passos</b><small>07/05/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">0h51</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Kelven Pimenta (co-mentor, Keepads) · Gustavo Braz (dono da Pyramid) · Bruno (marketing Pyramid) · Vanessa Rissardo (marketing FNX/Pyramid)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Comece pelo cliente e volte</b>: montar primeiro a jornada de compra e só depois campanha, criativo e orçamento — "o caminho contrário do que os gurus fazem".</li>
+          <li><b>Trackeamento é o mapa da jornada</b>: "o cara te acha pelo Google, mas fecha pelo Instagram"; sem leitura completa, a decisão fica "míope" — "se a gente derrubar o Google, vai arrebentar do Meta".</li>
+          <li><b>Público é o ouro do Meta</b>: nunca campanha Brasil com R$ 2.000 ("o Meta come o seu dinheiro"); fatiar geografias em planilha de cidades, habitantes e tamanho de público.</li>
+          <li><b>Fundo de funil não é campanha de conversão</b>: os 100 mil interessados JÁ SÃO o fundo de funil; pedir conversão em cima reduz o público — erro grave em B2B.</li>
+          <li><b>Venda offline devolvida ao Meta</b>: subir mensalmente nome, telefone, e-mail e data de nascimento da carteira — é o que alimenta lookalike e a inteligência da conta.</li>
+          <li><b>Do CTA para frente, quem manda é o cliente</b>: LP × WhatsApp × e-mail se decide por teste; e o marketing atende os leads nos 3 primeiros meses antes de passar a vendas.</li>
+          <li><b>Tráfego é máquina</b>: ~6 meses para ajustar; depois "quanto mais dinheiro você bota aqui, mais sai aqui" — e o gargalo vira o atendimento.</li>
+          <li><b>Kelven — branding B2B geolocalizado</b> (cases Doce da Vovó Ana e Zamix): alcance/vídeo em cima do comprador-alvo (~R$ 500 por supermercado) para a marca já ser conhecida quando o vendedor chega; e internalizar o tráfego ("na maioria dos casos de sucesso, o gestor estava interno").</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li><b>Fórmula dos 5 passos</b>: entrevistar clientes ("primeiro clique na internet") → trackeamento → investir tempo em público → venda offline devolvida ao Meta → testar do CTA para frente.</li>
+          <li>Conceito de fundo de funil como análise do público total antes de campanha.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>CPL R$ 12–17 · 100–120 leads/mês · qualificação 40–56%;</li>
+          <li>Conversão real 3–5% vs meta 10% · ticket 1º pedido ~R$ 2.000;</li>
+          <li>LTV: R$ 37 mil de recorrência em abril, R$ 105 mil no ano;</li>
+          <li>Meta do canal: R$ 500 mil/mês · verba histórica R$ 4.300/mês.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Compartilhar acessos das contas para auditoria prévia do Caio;</li>
+          <li>Internalizar o tráfego treinando o Bruno (não contratar terceiro);</li>
+          <li>Formato da mentoria: "transferir o método e sair do jogo".</li>
+        </ul></div>
+        <div class="eb"><h5>tarefas e próximos passos</h5><ul>
+          <li>Enviar acessos Meta/Google; aplicar questionário de 5 perguntas na carteira;</li>
+          <li>Reposicionar criativos para o distribuidor-importador (excluir consumidor final);</li>
+          <li>Auditoria → ligação Gustavo–Caio para fechar → entrevistas e montagem de público.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Tudo parte do cliente e depois a gente se adapta. Eu faço o caminho contrário do que os gurus fazem."</p>
+        <p>"O mapa da mina, na minha opinião, é nós investirmos tempo em montar um bom público dentro do Meta."</p>
+        <p>"O tráfego é literalmente uma máquina. Você leva 6 meses para ajustar."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E02</span><span class="e-title"><b>A espinha dorsal: organograma, caixa de ferramentas e MCIs</b><small>03/06/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">3h00</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Vanessa Rissardo (líder do projeto) · Thiago "Ramon" (comercial) · Bruno (marketing) · Gustavo citado (ausente por problema técnico)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Produto vs setor</b>: setor tem verba, comunicação e planilha próprias; a GT Fix passa a ser tratada como setor. No Galpão, a verba global (~R$ 20 mil/mês) é picotada por setor.</li>
+          <li><b>Organograma como guia de gargalos</b>: cruzar de onde vem a demanda e para onde vai; "a fortaleza de vocês está na carteira: quanto menos mexer e mais melhorar o processo, mais aumenta a venda".</li>
+          <li><b>Remuneração é acelerador</b> — e acelerador no lugar errado vira gargalo: desenhar antes da entrada dos 3 vendedores novos, apresentada como teste.</li>
+          <li><b>Pós-venda em 9 passos</b> formalizados (do faturamento à gestão de recompra); regra possível: "primeira venda é do vendedor, a segunda vai para a carteira".</li>
+          <li><b>Cronometrar o melhor vendedor</b> um dia ponta a ponta para achar burocracia eliminável — "você está metrificando o seu melhor vendedor".</li>
+          <li><b>Caixa de ferramentas</b>: registrar toda ação (data, canal, contexto, resultado, link), incluindo as que falharam — cenário se repete → abre a caixa e replica. Case: vídeo do Gustavo no fechamento = R$ 300 mil.</li>
+          <li><b>Banco de criativos</b>: vídeo que parou de performar volta a performar após ~3 meses de descanso — parar de gravar sem necessidade.</li>
+          <li><b>Planejamento Gama Educação</b>: campanhas trimestrais (estoque do cliente gira em ~3 meses); mês = ativação → dia P → manutenção → fechamento; andar um mês à frente.</li>
+          <li><b>Pré-feira/preview</b> (case Expo Revestir): trazer o cliente antes da feira — "seu concorrente que lute".</li>
+          <li><b>4DX/MCI</b>: meta em UMA frase com número de partida, chegada e prazo; MCI do marketing no início = <b>pedidos</b>, não leads (1.000 pedidos) — "isolar a variável" elimina o jogo de culpa.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Formato da mentoria: mensal estratégica (Caio) → semanal tática (Kelven) → aferição → correção;</li>
+          <li>Caixa de ferramentas · planilha Modelo Gama Educação · 9 passos do pós-venda;</li>
+          <li>Estrutura do mês (ativação, dia P, manutenção, fechamento) · fórmula de lançamento (vender 2 meses em 1);</li>
+          <li>4DX: MCI → medidas de direção → placar → reunião de MCI.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>R$ 300 mil da campanha do vídeo do Gustavo · contêiner vendido em 1 dia (Neymar/Feicom);</li>
+          <li>MCIs: empresa ~52M · carteira 51M até 14/12 · inbound 0→1M até outubro · marketing 1.000 pedidos;</li>
+          <li>Cobertura de carteira 50% · pesquisa: 9 respostas de ~30.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>GT Fix vira setor; campanhas trimestrais adotadas;</li>
+          <li>Reunião de campanhas (brainstorm) para preencher o planejamento até dezembro;</li>
+          <li>MCIs definidas; remuneração revista antes do dia 9; próxima mentoria 09/07.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Thiago: mapear a jornada do pedido e cronometrar o melhor vendedor; enviar modelo de remuneração;</li>
+          <li>Bruno: subir o vídeo do Gustavo no Drive e preencher a caixa de ferramentas com ações passadas;</li>
+          <li>Time: definir produtos isca/notável/sobremesa do mês; reenviar pesquisa domingo 20h; sessão tática com Kelven na sequência.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"A caixa de ferramenta é para quando você tiver um obstáculo, você não depender só do seu cérebro."</p>
+        <p>"A MCI blinda a gente de ideias que tiram a gente fora da nossa meta."</p>
+        <p>"Não gerou pedido, não gerou faturamento. E aí acaba com mimimi."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E03</span><span class="e-title"><b>Onboarding técnico: ClickUp, Claude e o método PDI</b><small>09/06/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h20</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor, Keepads) · Bruno (mentorado, tráfego Pyramid) · Vanessa Rissardo (assinaturas/gestão) · Enzo Santos (Keepads, apoio técnico)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Tráfego só funciona alinhado ao comercial</b>: a estratégia sai de lá; anúncio "desconexo" é a razão de tráfego não funcionar.</li>
+          <li><b>Gestão de tráfego é rotina</b>: otimizar, analisar e testar toda semana — rotinas viram tarefas recorrentes no ClickUp.</li>
+          <li><b>IA como pilar operacional</b>: um projeto no Claude por cliente (briefing, instruções, CSVs, histórico) — "o mais difícil do tráfego é ter todas as otimizações mapeadas".</li>
+          <li><b>Diagnóstico ao vivo</b>: campanha de sorteio rodando para público frio Brasil estava errada — comunicação de quente entregue a frio é "jogar dinheiro fora".</li>
+          <li><b>Construção de públicos</b> clicando na tela: lista de clientes, engajamento do Instagram, vídeo por retenção (25–95%) e janelas; quem assiste 95–100% do campeão é lead semiqualificado.</li>
+          <li><b>Lookalike ×2</b> (lista + vídeo 100%); case Custódia: Google Search qualificava o site → lookalike do site destravou o Meta.</li>
+          <li><b>Proteger o campeão</b>: produto/campanha validado nunca desliga; todo teste custa "R$ 6 por dia e um sonho" (R$ 300/mês).</li>
+          <li><b>Verba por engenharia reversa</b>: meta de faturamento → leads qualificados → custo do qualificado → investimento.</li>
+          <li><b>Técnico (Enzo)</b>: desligar aprimoramentos automáticos (CTA); pixel desde o início; remarketing para lembrança de marca.</li>
+          <li><b>Base de dados como ativo</b>: campanha interna de atualização de cadastro — "senão sua lista não vai ser um ativo, vai ser um passivo".</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li><b>Método PDI</b>: receber missões de estudo → estudar → resumir → apresentar na semana;</li>
+          <li>Setup de conta com IA (ClickUp + Claude + projeto por cliente);</li>
+          <li>Rotina de escala: campeã intocada → duplicar por região → variar criativos → medir.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Custo por mensagem ~R$ 2,00–2,70 · verba R$ 2.300/mês;</li>
+          <li>Lead bruto ~R$ 12 · qualificado estimado ~R$ 50;</li>
+          <li>Regra do teste: R$ 6/dia = R$ 300/mês.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Assinar ClickUp, Claude e curso Subido (Sobral);</li>
+          <li>Desligar sorteio para frio; religar a campeã (multiuso) em definitivo;</li>
+          <li>Google rede de pesquisa com urgência; traqueamento terceirizado.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Bruno: cursos com resumo e apresentação em 7 dias (Sobral + Gianini); subir lista de clientes e criar públicos;</li>
+          <li>Vanessa: assinaturas e campanha interna de atualização de cadastro; reunião comercial de produto/preço até quinta; PDI na terça 16/06.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Posso ser sincerão aqui? Tá ruim para caramba, mano. Tem que caçar produto, preço, não tem jeito."</p>
+        <p>"Todo sonho custa R$ 6 por dia, que vira R$ 300 no mês, é o mínimo."</p>
+        <p>"O público, mano, é uma das suas principais armas que você tem para gestão."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E04</span><span class="e-title"><b>O calendário anual de campanhas, de junho a dezembro</b><small>12/06/2026 · MÉTODO CAIO MARTINS · 3 partes</small></span><span class="e-dur">2h06</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Gustavo Braz (dono) · Vanessa Rissardo · César "Cezinha" (compras) · Camila e Gabi (comercial) · Bruno (marketing) · Fernanda (vendas) · Thiago e Ramon citados</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Tudo nasce do produto</b>: calendário nomeado de junho a dezembro; sem ele não há preparo — "como é que eu vou treinar um time de uma ação que você acabou de criar?".</li>
+          <li><b>Inverter o fluxo</b>: de setembro a dezembro, compras planeja pelo histórico o que a empresa QUER vender; a campanha nasce disso.</li>
+          <li><b>Tríade de empacotamento</b>: boi de piranha (atrai e vende sozinho — o disco), filezinho (margem boa, venda casada — serra-copo), sobremesa (massa de margem — serra 350mm); o encalhado é reempacotado (chave de teste de R$ 9 vira brinde escalonado por volume).</li>
+          <li><b>Campanha sempre em cima de fato novo</b>: "Hexa veio em 6 vezes" funciona com o Brasil ganhando ou perdendo.</li>
+          <li><b>Nunca clientes no mesmo saco</b>: pré-feira agressiva (compromete o budget antes da viagem) → feira com condição pior de propósito → pós-feira; cada "não" abre o próximo funil.</li>
+          <li><b>Evento preview antes da feira</b> (modelo das fábricas de piso): abrir a Pyramid 3 dias antes da Concrete Show; convites começam 1 mês antes — o fracasso anterior foi "falta de convite".</li>
+          <li><b>Dobra de pedido com compromisso agendado</b>: o valor não é o estoque travado, é a ligação marcada no CRM e na agenda do cliente; quem diz não recebe segunda oferta sobre o que faltou no mix.</li>
+          <li><b>Caixa de ferramentas do pós-venda + mutirão mensal</b> (caso Vinícius, R$ 300 mil na feira): 5–10 ações manualizadas, "o vendedor só diagnostica e escolhe a opção 1, 2 ou 3".</li>
+          <li><b>Investir no mês que já é bom</b>: aniversário da empresa comemorado em janeiro (mês recorde), não para salvar fevereiro — "se seu filho é bom de matemática, bota ele em aula de matemática".</li>
+          <li><b>Campanha de faixas de pedido "Você na China"</b>: faixas de R$ 100 mil a R$ 1 milhão com prêmios ranqueados por desejo e primeiro boleto para janeiro.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Calendário anual a partir do produto (7 etapas, da classificação à revisão quinzenal);</li>
+          <li>Ciclo de feira em 3 funis · evento preview · dobra de pedido agendada;</li>
+          <li>Campanha obrigatória (produto "par" bloqueado para forçar foco);</li>
+          <li>Ritual de fechamento: "ponto mais importante do dia" + "o que você executaria hoje".</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Steps Rumo ao Hexa: R$ 30/50/100 mil · ~22 SKUs;</li>
+          <li>Serra 350mm R$ 236 · disco Combat 105 R$ 10,40 · chave de teste R$ 9;</li>
+          <li>Faixas "Você na China": R$ 100 mil a R$ 1 milhão (1MM = China + 10x + 100 SKUs);</li>
+          <li>Feiras de agosto: ConstruSul, Expo Construir, Concrete Show (25–27), Cachoeiro Stone Fair.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões (o calendário)</h5><ul>
+          <li>Junho: campanha obrigatória de fechamento (produto Copa) · Julho: "Hexa em 6×" + jantar de aniversário + convites do preview;</li>
+          <li>Agosto: pré-feira (1–15) + feira (15–30) + preview na Pyramid 25–27/08;</li>
+          <li>Setembro: Semana do Cliente + evento de lançamento da pré-Black;</li>
+          <li>Out–dez: pré-Black, Black da base, saldão, "Você na China", boleto esticadinho; aniversário em janeiro.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Preencher a planilha de produtos (jun/jul primeiro) com produto, preço e prazo — urgente;</li>
+          <li>Criar o dia mensal do pós-venda e a caixa de ferramentas (pauta de próxima mentoria);</li>
+          <li>Compras: projetar embarques de setembro a dezembro; comercial: marcar "estoque alto" no CRM; revisão quinzenal do calendário.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Tudo nasce do produto, porque o objetivo do marketing é vender o produto."</p>
+        <p>"As campanhas de marketing, a gente nunca bota os clientes no mesmo saco."</p>
+        <p>"Muitas das vezes o bora que bora não dá o efeito que a gente gostaria de ter."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E05</span><span class="e-title"><b>1º PDI: leilão, criativo acima de segmentação e verba pelo histórico</b><small>16/06/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h39</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Bruno (mentorado, apresenta o estudo) · Vanessa Rissardo (início) · Enzo Santos (Keepads)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Leilão do Meta</b>: dominar e saber explicar os 3 mecanismos — lance, taxa de ação estimada e qualidade do criativo; "meu anúncio não aparece" quase nunca é só orçamento.</li>
+          <li><b>Na era da IA, a segmentação perdeu peso</b>: "o que mais faz diferença realmente é o criativo bem feito" — geográfico + público básico + teste.</li>
+          <li><b>Criativo da Pyramid</b>: o hook "se você é distribuidor…" é bom porque segmenta; o problema está no CORPO do vídeo — variar hook, trabalhar o body, validar por métrica.</li>
+          <li><b>Toda métrica tem 3 leituras</b>: o número, o custo e a taxa; desenhar o funil no papel → colunas personalizadas → CSV para o Claude → 3 meses de histórico como comparativo.</li>
+          <li><b>Verba baixa foca no que o cliente quer</b>: "quando a gente tem R$ 6 e um sonho, foca no que o cliente quer" — o comercial quer lead; testar 2 objetivos em paralelo (vendas × engajamento).</li>
+          <li><b>Meta pelo histórico real</b>: R$ 2.300 ÷ 50 qualificados = R$ 46/qualificado; escalar em degraus (50 → 80), nunca 50 → 300 — "dobrar verba não dobra lead, senão tava todo mundo rico".</li>
+          <li><b>MQL vs SQL</b>: marketing qualifica, vendas converte; medir conversão por vendedor.</li>
+          <li><b>Níveis de consciência em B2B físico</b>: o distribuidor já conhece o produto — o jogo é OFERTA + por que comprar da Pyramid; remarketing de autoridade ajuda o vendedor a quebrar objeção.</li>
+          <li><b>Persona/ICP documentada</b> é pré-requisito para alimentar a IA — "erro clássico que todo mundo negligencia".</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Rito de PDI com arguição ("o que você levou para a sua vida?");</li>
+          <li>Funil de métricas em 4 passos (papel → número/custo/taxa → colunas → CSV no Claude);</li>
+          <li>Cálculo de meta e verba por degraus; matriz de teste de objetivos;</li>
+          <li>Acesso Meta correto (página do Facebook, nunca pelo Instagram).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Lead bruto ~R$ 7–7,50 (≈328 leads/mês) · qualificado R$ 46–50;</li>
+          <li>Cenários: 80 qualificados = R$ 3.680 · 100 = R$ 4.600 · 200 = R$ 9.200.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Aprofundar Meta antes do Google (Google só após o traqueamento);</li>
+          <li>Módulo 3 (Meta Ads) em ritmo de 2 aulas/dia;</li>
+          <li>Manter verba até definir a meta de qualificados com o comercial.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Gravar ~3 criativos ("não inventa de fazer 10, faz uns 3"); definir meta de qualificados com o Ramon;</li>
+          <li>Criar todos os públicos; montar colunas e analisar 3 meses de CSV no Claude; documentar persona e briefing.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"O que mais faz diferença realmente é o criativo, criativo bem feito."</p>
+        <p>"A métrica são 3 situações: o número, o custo e a taxa."</p>
+        <p>"Duplica a verba que vai aumentar o número de leads? Não, se fosse assim, tava todo mundo rico."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E06</span><span class="e-title"><b>Claude aplicado ao tráfego e a leitura do funil real</b><small>19/06/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h09</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Bruno (mentorado) · Enzo Santos (Keepads, demonstra Claude Code) · Vanessa Rissardo (pontual)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Estrutura do Claude para gestor de tráfego</b>: instruções globais, um projeto por frente ("projeto é um caderno") e skills reutilizáveis (4DX, criador de persona no método Gianini, relatório WhatsApp).</li>
+          <li><b>Campanha Google guiada por IA</b>: com persona bem desenhada, print de cada tela e execução assistida (3 grupos por intenção, correspondência de frase, 25 negativas, maximizar cliques no início) — com a ressalva central: "se você não tiver explicação técnica por trás, ela só manda coisa genérica".</li>
+          <li><b>Métrica principal orientada ao que o cliente valoriza</b> (case seguidores): separar verba de AQUISIÇÃO da de AUTORIDADE para provar meta inviável; cruzar orgânico × pago antes de aceitar meta.</li>
+          <li><b>Potencializar viral com tráfego</b>: conteúdo orgânico performando recebe mídia em cima (cliente saiu de 300 para 1.000 seguidores/mês).</li>
+          <li><b>Acessos corretos</b>: o cliente concede acesso ao portfólio empresarial dele — nunca rodar na BM da agência: "eu fico com a inteligência do que você pagou".</li>
+          <li><b>Atribuição de WhatsApp</b> exige ferramenta ponta a ponta (Tintim/CQC) — sem isso, campanha de volume parece melhor que a de qualidade.</li>
+          <li><b>Leitura do funil real da Pyramid ao vivo</b>: 150 conversas → 22 qualificados (~15%) → 8 negociações (~R$ 10 mil) travadas pela exigência de pagamento à vista → ROAS teórico ~10 → <b>o gargalo é comercial, não mídia</b>.</li>
+          <li><b>Contra-lição de automação</b>: Kelven desligou o conector automático de métricas — o gestor "perde o feeling" se não entrar na ferramenta.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Setup Claude em 4 passos (instrução → projeto → descrição → arquivos);</li>
+          <li>Criação de skill a partir de material (4DX, persona);</li>
+          <li>Funil de qualificação B2B com taxas por etapa para achar o gargalo;</li>
+          <li>4DX na execução: placar de tarefas no ClickUp (51% → meta 90%).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Leads/dia 9 → 22 (após corrigir número de WhatsApp invertido);</li>
+          <li>150 conversas → 22 qualificados Meta + 10 site · investimento R$ 761;</li>
+          <li>Regra de bolso: ~300 leads brutos para 50 qualificados · ROAS teórico ~10.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Manter meta de 50 qualificados no mês; definir nova com o Ramon;</li>
+          <li>Implantar ferramenta de tracking (CQC/Tintim);</li>
+          <li>Pagamento à vista escalado ao Caio/comercial — não é decisão do tráfego.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Bruno, até terça: app do Claude, instrução global, projetos da Pyramid, briefing e persona completos;</li>
+          <li>Levantar valores das 8 vendas travadas e ticket médio; mandar áudio ao Caio sobre a condição de pagamento.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Projeto é um caderno... cada cliente meu tem um caderninho dele."</p>
+        <p>"Cara, entra na porra do gerenciador, faz o funil, puxa o CSV... senão a gente perde esse tato."</p>
+        <p>"As pessoas ficam falando, ah, a IA vai substituir. Não vai, velho."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E07</span><span class="e-title"><b>ClickUp como sistema e o funil de colunas em 3 camadas</b><small>03/07/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h20</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Enzo (co-mentor, apresenta o ClickUp) · Bruno (mentorado) · Vanessa Rissardo (gestora do projeto)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Funil de métricas em 3 camadas</b> (campanha, conjunto, criativo) com colunas personalizadas — "a maior briga com gestores de tráfego é a preguiça de desenhar esse funil".</li>
+          <li><b>Hook e body na prática</b>: hook alto = início prende (ex.: 53% com body 24%); estático não tem hook/body; sempre cruzar com o resultado final.</li>
+          <li><b>Remarketing "um degrau antes"</b>: criar públicos de 75% e 100% de visualização (R$ 0,38 para levar a 75%) e rodar remarketing só neles.</li>
+          <li><b>Janela deslizante dos públicos</b>: contam "de hoje para trás" — daí a tarefa recorrente semanal de atualização.</li>
+          <li><b>Persona B2B</b>: o papel do tráfego é achar criativos que tragam o máximo de distribuidores; a venda do catálogo é do comercial.</li>
+          <li><b>Otimização em sequência no Google</b>: primeiro palavras-chave, depois página de destino — "feita é melhor que perfeita".</li>
+          <li><b>"O Google é o pai de todos os ads"</b>: dominando os conceitos de uma fonte, as outras são interface diferente.</li>
+          <li><b>Gestão por tarefas (4DX)</b>: qualquer objetivo vira tarefas com responsável e prazo (~7 dias); um vídeo são pelo menos 4 tarefas.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Rotina ClickUp (recorrência, evidência anexada, revisão de tarefas abrindo a mentoria);</li>
+          <li>Otimização semanal com CSVs nas 3 camadas para o Claude;</li>
+          <li>Escada de cobrança comercial (2 cobranças → print para o dono);</li>
+          <li>Ciclo mensal de metas (validar custo do qualificado todo dia 3).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Junho: R$ 26.835 vendidos · 4 vendas · principal perda: pagamento à vista;</li>
+          <li>Campeã multiuso: 79 conversas · R$ 2,01 por lead · qualificado R$ 42,55;</li>
+          <li>Verba julho: R$ 3.300 Meta + R$ 1.000 Google · meta 75 qualificados.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Meta de 75 qualificados com +50% de verba;</li>
+          <li>Rede de pesquisa como prioridade urgente (revisão da Keepads antes de ativar);</li>
+          <li>Toda a gestão da mentoria centralizada no ClickUp.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Data de vencimento em todas as tarefas; módulos 3 e 4; criar públicos (30/90/365, vídeo, lookalike);</li>
+          <li>LP com Claude Code (dia 21); dashboard do histórico anual; call extra na terça para revisar campanhas.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Feita é melhor que perfeita."</p>
+        <p>"O Google é o pai de todos os ads."</p>
+        <p>"Qualquer coisa na sua vida que você queira fazer... vai destrinchar em tarefas e executar com prazo."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E08</span><span class="e-title"><b>Liderança do projeto, MCI semanal e o mês das feiras</b><small>09/07/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">2h15</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Kelven Pimenta (co-mentor) · Vanessa Rissardo (assume a liderança) · Thiago "Ramon" (comercial) · Fernanda Berlato · Bruno (marketing) · Bruno Braz (time da máquina)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Líder do projeto = dono da cadeira de marketing</b>: é ele quem "inferniza" o comercial atrás de retorno; critérios: agenda, autonomia e maturidade — "a parte do perfil de liderança é sempre mais importante do que a do conhecimento".</li>
+          <li><b>Agenda em blocos + dias temáticos</b>: planilhar TODAS as tarefas, encaixar na semana, agenda só com blocos; 2h todo domingo para montar a semana — "você para de gerenciar agenda e gerencia tempo".</li>
+          <li><b>Reunião de MCI ≤ 20 minutos</b>, dia e hora fixos: meta, leads, medidas de direção, o que falhou e correção — "senão vira bate-papo e mundo de lamentação".</li>
+          <li><b>Permissividade</b>: protocolo agenda → apoio → treino/feedback registrado → PDI → desligamento na 3ª falha; tolerar o fraco apodrece a cultura.</li>
+          <li><b>Perfil comportamental ("mangá")</b>: Bruno tem estabilidade alta → excelente especialista, não líder agora — "lê essa porra todo dia".</li>
+          <li><b>Follow-up é perturbação com quebra de padrão</b>: foto do vendedor com o produto, arte de "procurado", áudio; para inativos, vídeo do DONO ("vi que você está 30/60 dias sem comprar").</li>
+          <li><b>Briga de canal</b>: regra "cliente ativo há 30 dias é da carteira"; IA checa o CNPJ na base.</li>
+          <li><b>Campanha por feira do produto para frente</b>: boi/filé/margem por feira; pino de geolocalização 1–5 km + copy "sei que você está na ConstruSul"; sem esquecer o "quintal de casa" (SP).</li>
+          <li><b>Metrificar todo teste</b>: código de rastreio na mensagem ou número exclusivo, com devolutiva do time.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Agenda em blocos + planejamento dominical;</li>
+          <li>Reunião de MCI semanal + brainstorm mensal (4DX);</li>
+          <li>Protocolo anti-permissividade em 3 rodadas;</li>
+          <li>Campanha por produto empacotada por público (carteira, feira, região, remarketing).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Junho: 291 mensagens → 47 qualificados (16%) → 5 vendas / R$ 32 mil;</li>
+          <li>Custo por mensagem: R$ 12,30 (mai) → R$ 7,90 (jun) · melhor criativo R$ 2,01–2,90;</li>
+          <li>~R$ 25 mil perdidos por política comercial · cadência de follow-up 8–12 contatos/15 dias.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Vanessa assume liderança do projeto e do marketing; Bruno vira especialista/executor;</li>
+          <li>1ª reunião de MCI: sexta 13h, com Caio ensinando o formato;</li>
+          <li>Testes: público do perfil do Gustavo, Google search para feiras, e-mail marketing, ligue-lead.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Líderes: planilhar a semana e montar agenda em blocos; conversar com o Bruno e enquadrá-lo no projeto;</li>
+          <li>Bruno: gravar vídeos de pré-feira e feiras, remarketing com CTA, rede de pesquisa;</li>
+          <li>Ramon: listas para e-mail, perguntas da IA, mutirão mensal de pós-venda; envio semanal de indicadores no grupo.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"É mentoria, não é consultoria, eu não vou fazer para vocês."</p>
+        <p>"O follow-up é follow-up de enchição de saco até o cara responder."</p>
+        <p>"A gente não tá jogando o jogo de uma venda, a gente tá jogando o jogo de LTV."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E09</span><span class="e-title"><b>O tripé quantidade-taxa-custo e a rotina do gestor</b><small>14/07/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h39</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Enzo (co-mentor, revisão de tarefas) · Bruno (mentorado) · Vanessa Rissardo (gestora)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Tripé universal</b>: toda métrica se decompõe em QUANTIDADE, TAXA e CUSTO — nas colunas do Bruno faltavam as quantidades e o clique/CTR.</li>
+          <li><b>Separar visões de análise</b>: um funil só para WhatsApp (alcance → clique → conversa) e outro só para criativo (hook, retenções, custos de vídeo) — misturar atrapalha a decisão.</li>
+          <li><b>Público de engajamento ≠ público de vídeo</b>: como quase todo conteúdo da Pyramid é vídeo, sem públicos por percentual assistido "você está perdendo pessoas".</li>
+          <li><b>Alertas do Meta são referência, não veredito</b>: custo por conversa de R$ 8,94 (vs R$ 2–4 típico) pode compensar se o lead é mais qualificado — a análise é retorno por lead, não só CPL.</li>
+          <li><b>Atribuição no WhatsApp</b>: paliativos (variar a mensagem pronta por campanha, código no fim) até implantar CQC/Tintim, que devolve ao Meta quem é distribuidor.</li>
+          <li><b>Uso do Claude</b>: contexto do projeto ~30% preenchido; dados de campanha no chat; "leia os chats do projeto" para revisar otimizações passadas.</li>
+          <li><b>Rotina do gestor</b>: máximo ~9 reuniões/semana; agenda em blocos; uma tarefa por vez; regra dos 2 minutos; criativo com validade vai para alarme.</li>
+          <li><b>Gestão de tráfego = execução de tarefas</b>: "cada reunião sai um trilhão de coisa e ninguém executa nada porque não é mensurado".</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Ritual de revisão quinzenal no painel do ClickUp (check com histórico, recorrentes);</li>
+          <li>Framework quantidade-taxa-custo para qualquer coluna/funil;</li>
+          <li>Teste paralelo de ferramentas de atribuição (CQC × Tintim);</li>
+          <li>Método de agenda do gestor (blocos, alternância reunião/operação).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Benchmark da conta: conversa R$ 2–4 · qualificado validado ~R$ 41 (meta R$ 50);</li>
+          <li>Meta 75 qualificados: 29 real vs 33 projetado no dia;</li>
+          <li>41 de 91 tarefas concluídas (~50%) · públicos 7 a 180 dias criados.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Tarefas do Caio saem do ClickUp de tráfego (ficam no Drive com a Vanessa);</li>
+          <li>Bruno assume o teste da ferramenta de atribuição (~R$ 100/mês);</li>
+          <li>Dashboard de KPIs com a equipe Envolve; próxima mentoria em 15 dias.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Criar públicos de vídeo por percentual e lookalike da lista; adicionar quantidades + clique/CTR nas colunas;</li>
+          <li>Montar funil WhatsApp e funil criativo separados; briefing no contexto de todos os projetos do Claude; solicitar verba do Google e subir a rede de pesquisa.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Sempre vai ter 3 coisas atreladas: a quantidade, uma taxa e o custo."</p>
+        <p>"O meu papel é te transformar num bom gestor de tráfego. E para mim, gestão de tráfego é executar tarefa."</p>
+        <p>"Gestão de tráfego são coisas simples... só que é um monte de coisa simples."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E10</span><span class="e-title"><b>Google Ads na prática e a escala guiada por LTV</b><small>28/07/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h10</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Bruno (mentorado, apresenta o módulo 4) · Vanessa Rissardo (experiência de Mercado Livre) · Enzo citado</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Arquitetura do Google</b>: pesquisa, display, YouTube, Shopping, Maps são REDES; Analytics, Merchant e Meu Negócio são PRODUTOS que se integram.</li>
+          <li><b>Lances como funil</b>: começar com maximizar cliques (aprendizado) e migrar para CPA; "máximo" gasta a verba toda, "desejado" persegue o alvo.</li>
+          <li><b>PMax não é para a Pyramid</b>: o cliente está na PESQUISA — o jogo é acertar palavras-chave.</li>
+          <li><b>Coerência pesquisa-anúncio-página</b> ("lógica do bolo de cenoura"): produto pede LP específica, nunca site institucional.</li>
+          <li><b>Palavras B2B sempre com o produto</b> ("disco") para não atrair consumidor final + palavras de intenção do distribuidor ("como importar", "marca própria"); termos de pesquisa reais guiam a negativação.</li>
+          <li><b>Mercado Livre como fonte de palavras</b>: "é uma grande rede de pesquisa" com intenção pura de compra.</li>
+          <li><b>Matérias de imprensa</b> viram ativo de remarketing de autoridade ("já viu nossa reportagem?").</li>
+          <li><b>Escala guiada por LTV</b>: conta linear validada (+50% verba = 50→75 qualificados); antes de dobrar, verificar se sai venda (R$ 80 mil travados) e calcular a recorrência (R$ 37 mil/mês; provedor: venda de R$ 100 vale R$ 2.400 no LTV).</li>
+          <li><b>"Um braço estudando, outro praticando"</b>: teoria sem campanha no ar não vale; montar com o Claude do lado.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Passo a passo da lista de palavras-chave (público → positivas/negativas → planejador → "roubar como artista" → correspondências);</li>
+          <li>Rotina semanal com o comercial: sexta define produto/estoque → segunda grava e entrega;</li>
+          <li>Sistema de placas (vermelho/amarelo/verde) + fone para foco do marketing;</li>
+          <li>Processo financeiro de mídia (solicitação → aprovação → Pix na hora).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Meta 75 batida (79) · 6 vendas / R$ 21 mil · conversão comercial ~12%;</li>
+          <li>~R$ 3 mil Meta + R$ 1.000 Google · R$ 80 mil em orçamentos no funil;</li>
+          <li>Recorrência média dos clientes da máquina: R$ 37 mil/mês.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Rede de pesquisa no ar até sexta (Vanessa como fiscal);</li>
+          <li>Mentoria passa a ser semanal; feira sem pré-campanha;</li>
+          <li>Assessoria de imprensa cancelada — matérias viram insumo de remarketing.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Subir a campanha de pesquisa (palavras com Claude + planejador); concluir módulo 3;</li>
+          <li>Próxima: iniciar o projeto LEAD QUALIFICADO com ferramenta de atribuição; olhar os R$ 80 mil travados com o comercial.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Um braço estudando, outro braço praticando."</p>
+        <p>"O ideal é casar as três coisas: o anúncio falando daquilo, a página falando daquilo, e a pesquisa."</p>
+        <p>"Vai ter que entrar com os dois pés na parte comercial."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E11</span><span class="e-title"><b>Meta Ads avançado: ativos, lookalike, objetivos e a demo do CQC</b><small>11/08/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h36</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Bruno (mentorado, apresenta o módulo de Meta Ads)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Cadeia de ativos</b>: perfil → página → BM → gerenciadores; sempre no perfil do DONO (case da construtora que perdeu R$ 100 mil de inteligência na BM da agência).</li>
+          <li><b>Vídeo como qualificador de público</b>: públicos de visualização (25–100%) em janelas de 7 a 180 dias, com rotina SEMANAL de atualização (na Keepads, um estagiário 6h/dia só para isso).</li>
+          <li><b>Lookalike + junção Google/Meta</b> (case escritório de arquitetura): Google Search alimenta o pixel do site → lookalike 1% destrava o Meta — "se o semelhante não funciona, a sua lista que é ruim".</li>
+          <li><b>Objetivo segue o negócio</b>: supermercado = alcance (1.000 pessoas por R$ 3); vendas traz qualidade, engajamento traz volume; tráfego "só para ganhar seguidor".</li>
+          <li><b>Sazonalidade de CPM</b>: Black Friday e eleições inflam CPM de setembro a novembro — prever no orçamento e na meta de CPL.</li>
+          <li><b>Nomenclatura em 3 níveis</b> que permite "bater o olho" (e ajuda até o Claude a analisar a conta); proibido deixar "cópia".</li>
+          <li><b>Advantage como teste, não muleta</b>; e-commerces grandes "toram o Advantage" com 600 criativos/semana — o jogo vira criativo.</li>
+          <li><b>CBO × ABO</b>: ABO para isolar variáveis; testes "na mesma temperatura e pressão".</li>
+          <li><b>CQC demonstrado</b> (case Body Prime): funil do WhatsApp em eventos do Meta; 420 conversas → 123 agendamentos (32–33%) — "isso não tem como ver só no gerenciador".</li>
+          <li><b>Método de aprendizado</b>: estudar → anotar → apresentar → feedback — "tem como você não aprender?".</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Checklist anti-perda de conta (ativos separados, 2 BMs por perfil);</li>
+          <li>Estratégia Google → site → pixel → lookalike 1% → Meta;</li>
+          <li>Roteiro de reunião com cliente (funil + comparativo mês a mês + relatório no Claude);</li>
+          <li>Rotina de negativação no Google (10–15 min a cada 2–3 dias).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Google Pyramid: 2.868 impressões · 30 conversões · R$ 434,45 · 1–2 qualificados;</li>
+          <li>CPM R$ 2,41 (era R$ 3,22 na Copa) · YouTube R$ 0,02/view · frequência 3,3–3,9;</li>
+          <li>Body Prime: ~50% do faturamento vem do tráfego.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Mentoria quinzenal; Google rodando sem mexer por ora;</li>
+          <li>Liberar o curso "fórmula do lead qualificado" e implantar o CQC na sequência;</li>
+          <li>Reorganizar vínculos das contas quando o Instagram voltar.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Terminar o curso do lead qualificado em ~1 semana; rotina de negativação; adiantar as LPs;</li>
+          <li>Verificar no detalhamento se os leads vêm do Instagram ou do Facebook; nomenclatura passa a ser cobrada.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"O vídeo é o primeiro cara que vai qualificar sua audiência."</p>
+        <p>"A de vendas traz mais qualidade. A de engajamento traz mais volume."</p>
+        <p>"Você estuda, você anota, você apresenta, e eu vou te dando feedback. Tem como você não aprender?"</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E12</span><span class="e-title"><b>Funil de 3 saídas, recado de vídeo e o placar com LTV</b><small>13/08/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">2h17</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Kelven Pimenta (co-mentor) · Vanessa Rissardo (líder do projeto) · Thiago "Ramon" (comercial) · Bruno (marketing)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Funil visível de ponta a ponta</b>: 601 conversas → 79 qualificados (13%) → CRM (23 atendimento, 11 negociação, 9–10 vendidos); 522 ficam para trás em duas saídas invisíveis (não qualificado e SEM RESPOSTA) — "a taxa é o dedo duro da sua operação".</li>
+          <li><b>Recado de vídeo para não-respondentes</b>: 30 min/dia respondendo ~50 conversas com vídeo nominal e CTA de café — na loja do Caio, permitiu <b>cortar 50% da verba de tráfego</b> mantendo o volume.</li>
+          <li><b>Tirar o lead do WhatsApp rápido</b>: "o caminho é muito mais longo no WhatsApp do que numa ligação"; IA vira SDR (qualifica → agenda ligação → vídeo do time → avisa número desconhecido).</li>
+          <li><b>Ciclo tarefa → evento → rotina → medida de direção</b>: o dia do pós-venda nasce como evento com endomarketing e evolui até virar medida no placar.</li>
+          <li><b>Placar 4DX bem construído</b>: MCI escrita no topo, meta/real/esperado em verde/vermelho — "bati o olho e sei se estamos ganhando o jogo"; hack: jogar o PDF das 4DX na IA e pedir o placar.</li>
+          <li><b>LTV no placar</b>: taguear no ERP todo cliente da máquina (em reais e em compras) — "parar de fazer só primeira venda e focar em segunda, terceira, quarta".</li>
+          <li><b>Produto primeiro na prática</b>: planilha de famílias com ABC + dias sem venda (na loja dele: 19 bois de piranha, 43 filezinhos, 21 sobremesas).</li>
+          <li><b>Traduzir campanha de carteira para a máquina</b>: kits Makita viram "primeira compra ganha Makita" + combo + medida de direção; "nunca assumir a responsabilidade de entregar o prêmio".</li>
+          <li><b>Black primeiro, Semana do Cliente adaptada</b>; videochamada na etapa de fechamento como defesa de crédito; endomarketing começa com pesquisa ("um dia de faxineira" venceu dinheiro).</li>
+          <li><b>Debriefing pós-campanha</b> e ciclo trimestral de feedback ao mentor.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Funil marketing+vendas com 3 saídas da IA e taxa por etapa;</li>
+          <li>Rotina diária de recados de vídeo · fluxo IA-SDR;</li>
+          <li>Placar 4DX (MCI + meta/real/esperado + verde/vermelho, toda segunda);</li>
+          <li>Escadinha da Black (evento top 30 → pré-Black/Black → Black de novembro).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>601 conversas → 79 qualificados (13%) · ~50 vídeos/dia respondidos pelo Caio;</li>
+          <li>Corte de 50% na verba de tráfego dele · cadência comercial ~13 contatos;</li>
+          <li>Campanha inox R$ 0,59 ≈ 93–100 mil peças (máx. 20% do pedido).</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Excluir via CEP as cidades com exclusividade de distribuidor;</li>
+          <li>Teste do recado de vídeo; 3 colunas no CRM ou troca de IA;</li>
+          <li>Placar toda segunda no grupo; reunião presencial da Black em agosto; link de pagamento rejeitado pelo financeiro.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Ramon: regras dos leads da máquina; dia do pós-venda; segmentar a planilha de famílias; LTV no ERP com Kevin;</li>
+          <li>Bruno: exclusões por CEP, recados de vídeo, funil do passado para comparativo, placar gerado com IA;</li>
+          <li>Vanessa: convite da reunião da Black; "me chamem mais, mandem o criativo, o indicador".</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"A taxa é o dedo duro da sua operação."</p>
+        <p>"Eu cortei minha verba de tráfego em 50% e tô tentando fazer o mesmo volume de vendas com a metade da verba."</p>
+        <p>"Eu sempre olho para o produto para depois pensar como vender."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E13</span><span class="e-title"><b>A fórmula do lead qualificado: lead score, CQC e funil completo</b><small>25/08/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h37</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Bruno Correia (mentorado) · Vanessa Rissardo (decisões de orçamento) · Enzo (Keepads, técnico) · Caio Martins (pontual, agenda da Black e roteiro de depoimentos)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Gerar lead virou commodity</b>; o produto é o lead qualificado — "em vez de vender gestão de tráfego, eu vendo lead qualificado".</li>
+          <li><b>Lead score</b>: pontos por 5 tipos de pergunta (investimento, dores, urgência, fit, consciência); &lt;30 desqualifica, &gt;70 atende em menos de 30 min; quanto mais perguntas, menor a conversão.</li>
+          <li><b>Devolver informação à plataforma (CAPI)</b>: não basta o gestor saber quem é bom — o Meta precisa saber; "essa aí é a gestão de tráfego 2.0".</li>
+          <li><b>Arquitetura do CQC</b>: jornada do WhatsApp mapeada em eventos padrão (Lead → View Content → Add to Cart → Initiate Checkout → Purchase) disparados por palavras-chave; conexão por QR code — API mal conectada vira "orgânico" e destrói a atribuição.</li>
+          <li><b>Antes de configurar, mapear o funil comercial</b> (case Oliveira Rondelli): "a parte mais difícil é que o cara não entende o próprio fluxo".</li>
+          <li><b>Anúncio bonito é o que vende</b>: filtro, não ímã; anúncio de timing (o "Hexa" segue campeão pós-Copa — decisão por dados); horizontalização da copy; diagnóstico: a Pyramid usa pouco prova social.</li>
+          <li><b>Prova social operacional</b>: câmera e script de 5 perguntas impressos na mesa quando o cliente visita; Caio complementa o roteiro (distribuidor → margem → importação → CTA).</li>
+          <li><b>Ler o funil completo</b> (case Júlio, advocacia): R$ 5.000 → 944 leads vs R$ 5.000 → 515 leads, mas potenciais 78→87 e atendimentos 122→132 — metade dos leads, resultado maior; cliente dobrou a verba.</li>
+          <li><b>Cadência comercial → tráfego</b>: resumo diário do closer + lista de objeções alimentando roteiros no Claude (case Vitae: de ~6 para ~20 vendas/mês).</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Fórmula do lead qualificado (lead score → meta de conversão → laboratório de performance com UTMs + tabela dinâmica → IA);</li>
+          <li>Passo a passo de implantação do CQC (8 etapas);</li>
+          <li>Roteiro de depoimento (5 perguntas impressas);</li>
+          <li>Report diário do comercial (leads, vendas, temperaturas, objeções).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Pyramid no período: 7 vendas · R$ 27 mil · 80 qualificados · 500+ leads;</li>
+          <li>Lead score: &lt;30 desqualificado · &gt;70 atendimento &lt; 30 min;</li>
+          <li>CQC ~R$ 100/mês · Júlio: verba dobrada para R$ 10 mil.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Vanessa autoriza o CQC próprio da Pyramid; unificar números de WhatsApp se necessário;</li>
+          <li>Manter a IA receptiva atual (sem dados para trocar); manter o Hexa rodando;</li>
+          <li>Reunião de Black Friday com Caio: dia 3, às 10h.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Bruno: assinar e configurar o CQC com o Enzo; sentar com o comercial para definir lead qualificado e lead score; script de depoimentos no grupo;</li>
+          <li>Em 15 dias: CQC rodando + lead score alinhado — "aí eu te passo as próximas dicas".</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Gerar lead virou commodity, todo mundo gera lead. Agora, gerar lead qualificado é outra história."</p>
+        <p>"O anúncio deve ser um filtro e não um ímã."</p>
+        <p>"Se a gente não olhar o funil completo, o tráfego é demitido."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E14</span><span class="e-title"><b>O diagnóstico do "lead desqualificado" e o criativo cabeça/corpo/CTA</b><small>01/09/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">1h12</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Kelven Pimenta (co-condutor analítico, apresenta os números do funil) · Vanessa Rissardo · Bruno (tráfego Pyramid)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Teste do açougueiro</b>: "estamos anunciando disco e está chegando açougueiro querendo 1 kg de carne?" Se chega gente do setor, criativo e público estão certos — o gargalo desce para qualificação ou alinhamento com o comercial.</li>
+          <li><b>A raiz era alinhamento de PCI</b>: o comercial operava com regra diferente da real (confirmada por telefone na hora) — "é falta de alinhamento de perfil de cliente ideal"; o PCI deve estar escrito e alinhado.</li>
+          <li><b>Gestão por números</b>: pelo Gerenciador, o tráfego melhorou em tudo → o gargalo está "do lead qualificado para baixo"; orçamento "chutado" destrói o indicador de valor em negociação — fazer a "conta de idiota" (cortar pela metade para ver o real).</li>
+          <li><b>Teste de escala</b>: "botou R$ 2.000 e saiu R$ 20.000. Se eu botar 4, sai 40?" — Bruno valida: +50% de verba = leads exatamente proporcionais (50 → 75).</li>
+          <li><b>Criativo B2B vencedor</b>: estático com fundo do universo do cliente + frase qualificadora ("Se você é dono de loja de aluguel de máquina…") + variação em vídeo com a mesma capa.</li>
+          <li><b>Arquitetura cabeça/corpo/CTA</b>: uma cabeça por PCI (e por região, começando por SP), corpo único com o pitch, CTA único — troca-se só a peça que está ruim.</li>
+          <li><b>Banco de criativos ("viver de Frankenstein")</b>: pastas por PCI com cabeças, corpos, CTAs e campeões; pasta por campanha para releitura no ano seguinte.</li>
+          <li><b>Consumidor final vira receita indireta</b>: mandar o link do Mercado Livre do distribuidor — "dinheiro sai do bolso direito, vai para o esquerdo" — como etapa formal do funil.</li>
+          <li><b>Centralizar o WhatsApp na maturação</b> e <b>não mexer nos campeões</b> (teste só em campanha nova).</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Funil de diagnóstico do lead desqualificado (4 verificações em sequência);</li>
+          <li>PCI em planilha (perfis nomeados por segmento);</li>
+          <li>Estrutura cabeça/corpo/CTA com gravação em lote;</li>
+          <li>Teste de escala proporcional de verba.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>Jul → ago: conversa R$ 4,83 → 4,58 · qualificação 13,1 → 13,6% · CPL qualificado R$ 36 → 33;</li>
+          <li>Ticket médio R$ 3.464 → 3.649 · ROAS ~10;</li>
+          <li>Estimativa: +R$ 1.500 no Meta ≈ +45 qualificados e +R$ 15 mil de receita.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Pausar Google Ads e realocar verba para o Meta;</li>
+          <li>Pedir verba ao Gustavo com o print "botou 2, voltou 20" — sem prometer garantia;</li>
+          <li>Criativos por PCI e por região; alinhamento da política comercial com Gustavo e Ramon.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Bruno: gravar todas as cabeças em lote; montar as pastas do banco de criativos; copies para revisão no grupo;</li>
+          <li>Vanessa: reunião de alinhamento comercial; taxa de conversão do comercial para a próxima; quinta-feira: brainstorm da Black do time da máquina.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Tá chegando gente querendo 1 kg de alcatra? Não. Então tá qualificado."</p>
+        <p>"A gente vai viver mais de Frankenstein do que ficar toda hora criando um criativo novo."</p>
+        <p>"Garantido é só a morte."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E15</span><span class="e-title"><b>A Black Friday na metodologia: oferta primeiro, conta reversa depois</b><small>03/09/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">2h12</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Vanessa Rissardo · Bruno (tráfego) · Kelven citado como executor futuro da estratégia de mídia</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>A metodologia pensa do produto para a campanha</b>: a reunião interna havia sido brainstorm + ata; Caio recoloca tudo na planilha metodológica (validada pelo próprio Bruno: "o que funciona é mostrar um produto que chama atenção e trazer o cara para dentro").</li>
+          <li><b>Uma empresa não pode ter duas abordagens conflitantes</b>: se a campanha externa anuncia R$ 1,99 e a proposta do cliente da carteira é R$ 2,99, a campanha pública destrói a venda interna.</li>
+          <li><b>A oferta comanda tudo</b>: "Black Friday é 100% amarrada a produto, desconto e ação comercial"; o tipo de campanha se escolhe DEPOIS — "da oferta a gente cria a estratégia, não o contrário"; e oferta não é só desconto: "qual é o clima que vai rodar a empresa?".</li>
+          <li><b>Pré-Black com grupo VIP</b>: "eu crio a Black e depois dou um passo para trás e faço a pré-Black" — carrinho aberto dentro do grupo antes da Black pública.</li>
+          <li><b>Conta reversa do funil</b>: R$ 11 mil de verba → ~220 leads → ~R$ 72 mil (conversão 10%); o exercício revela as alavancas — a conversão caiu de 11,93% para 9,26% e "o mesmo número de leads com taxa menor" derruba a receita.</li>
+          <li><b>ROI como baliza</b>: "o ROI 10 é uma média dos nossos clientes; abaixo disso tá muito ruim" — e ROI de mídia ≠ DRE/LTV (a aprofundar com o financeiro).</li>
+          <li><b>Toda ação precisa ser mensurável</b>: o mutirão dos 50 leads e o recontato com 200 falharam nisso (a IA assume a conversa e não marca origem).</li>
+          <li><b>"A cultura come a estratégia no café da manhã"</b>: adaptar a forma, não impor; a reunião de marketing mensal da Pyramid passa a conter campanha, produto, oferta e canal.</li>
+          <li><b>Quem detém o conhecimento entra na sala</b>: sem quem sabe estoque e margem, a discussão vira "metralhadora de ideias".</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Planilha "metodologia Gama Educação" (PCI → canais → criativos → famílias por PCI → produtos → ofertas → números);</li>
+          <li>Sequência Black: oferta → Black → pré-Black (grupo VIP) → destrinchar por canal;</li>
+          <li>Planilha de tráfego por canal (frio/quente, verba semanal, tipo de campanha por linha);</li>
+          <li>Protocolo de alinhamento de expectativa no fechamento da reunião.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>451 clientes ativos · agosto: 108 qualificados · conversão 9,26% (julho 11,93%; melhor histórica 14,5%);</li>
+          <li>Vendas ago R$ 32.962 · verba total R$ 5.402 (Meta R$ 2.899);</li>
+          <li>Projeção Black: R$ 11 mil → 220 leads → R$ 72 mil (otimista ~R$ 122 mil) · baliza ROI = 10.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Black externa no mês 10, com pré-Black antes (grupo VIP);</li>
+          <li>Verba ~R$ 11 mil concentrada no Meta;</li>
+          <li>Reunião terça 8h com Gustavo e Ramon EXCLUSIVA para definir a oferta; próxima mentoria vira treino de liderança da reunião.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Vanessa: agendar a reunião de oferta; cobrar a liberação do investimento; levar ao comercial a necessidade de oferta "palpável";</li>
+          <li>Bruno: números fechados do funil (feito ao vivo); com a oferta definida, Caio + Kelven desenham a estratégia por canal na planilha de tráfego.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"A cultura come a estratégia no café da manhã."</p>
+        <p>"Da oferta a gente vai criar a estratégia para alcançar o cliente que a gente quer, não o contrário."</p>
+        <p>"Eu crio a Black e depois dou um passo para trás e faço a pré-Black."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E16</span><span class="e-title"><b>Black por canal, matriz de produtos e o pitch de evento</b><small>08/09/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">2h16</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Gustavo Braz (dono, sai no meio) · Vanessa Rissardo · Thiago Ramon (gestor comercial) · Bruno (tráfego/marketing) · Bruno Braz (em transição)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>A campanha nasce do produto e se desdobra por canal</b>: mote único ("Black da Pirâmide") com ofertas adaptadas — se a máquina anuncia R$ 0,99 e a carteira vende a R$ 1,59, "dá pau"; a resposta ao cliente é "é minha tabela de 100 mil — vamos nela?".</li>
+          <li><b>A máquina se paga no LTV</b>: 28 clientes em 2 meses; cliente da máquina é mais barato que feira, prospecção ou ligação fria.</li>
+          <li><b>Vender no calor do evento</b>: manhã teórica, almoço, tarde de "reunião de compras e tirar pedido" — pitch em 5 passos: fragilização → clube de compras por contêiner → o dono entra junto → rebate em novos produtos → escassez/sigilo.</li>
+          <li><b>Caso-escola do rebate</b>: cliente de R$ 400 mil/quadrimestre contrapropôs R$ 1,8 mi por +2% de rapel — fechou; amarrar à meta de crescimento de 30% por cliente.</li>
+          <li><b>"Black Friday é comprar cliente"</b> (o "9 do 9" dele: 9 produtos no prejuízo, 391 clientes na loja em um dia).</li>
+          <li><b>Matriz por perfil preenchida ao vivo</b>: boi de piranha universal = disco de porcelanato 105×10 ("compra o lead com produto notável para ter CAC baixo"); filé = serras 350; margem = SDS Plus, disco vermelho, ferramentas manuais.</li>
+          <li><b>Percentual, nunca preço absoluto</b> (após a crise do criativo da Copa que expôs margem): "até 70% off" + prazo; escassez: limite de peças por CNPJ — "toda vez que você limita, o cara entende que tá barato pra caramba".</li>
+          <li><b>Pastinha preta</b>: tabelas prontas por faixa (10/20/30–50/100 mil) por perfil — "para o vendedor não ter que raciocinar, só ofertar".</li>
+          <li><b>Tráfego fundo de funil por região</b>: criativo abrindo "Você que é de [cidade]…" — "quanto mais específico, menor o CAC"; balizar o público do Meta com o Google Meu Negócio (via ChatGPT) — "é um dedo-duro se o Meta tá desregulado".</li>
+          <li><b>Gestão de pessoas</b>: vaga substituta de perfil comercial ("mais escasso que marketing"); ex-funcionário como freela; "quando a gente não faz o que tem que ser feito, a vida vem e faz".</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Reunião de marketing: produto → mote → desdobramento por canal → tabelas → criativos;</li>
+          <li>Anatomia da oferta de Black (notável + % + prazo + amarração + limite por CNPJ);</li>
+          <li>Pitch de evento em 5 passos · tiro de misericórdia + mutirões por faixa;</li>
+          <li>Arquitetura de tráfego regional (capital, Grande SP, litoral, interiores) com planilha de verba por célula.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>28 clientes novos em 2 meses · 11 qualificados no fim de semana · meta 90 leads/mês;</li>
+          <li>Públicos Meta: SP estado ~124–145 mil · capital ~370–470 mil;</li>
+          <li>Condições de cliente novo: R$ 5 mil e R$ 10 mil (prazo até 90 dias).</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Black: disco 105×10, "até 70% off" + prazo, sem preço absoluto, limite por CNPJ, rodando em outubro;</li>
+          <li>Vender no próprio evento de sexta (clube de compras + rebate);</li>
+          <li>Tráfego começa por SP segmentado; vaga substituta de perfil comercial.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Vanessa: % de desconto e prazo com Ramon; levantar lojas por cidade (ChatGPT + Google Meu Negócio);</li>
+          <li>Ramon: separar clientes por faturamento e perfil; testar pacote de R$ 50 mil em clientes de R$ 10 mil;</li>
+          <li>Bruno: público do Meta por cidade na planilha; próxima mentoria (15/09, 15h): tabelas por faixa + planilha de tráfego da Black.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Black Friday é isso, é comprar cliente."</p>
+        <p>"Eu não falo mentira no marketing, depois você se fode."</p>
+        <p>"Deixar tudo amarradinho para o seu vendedor não ter que raciocinar, só ofertar."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E17</span><span class="e-title"><b>O funil de métricas no Gerenciador e a escala do campeão Hexa</b><small>15/09/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">1h30</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Wesley (co-mentor Keepads, corrige fórmulas e demonstra a matriz de criativos) · Bruno (mentorado) · Vanessa Rissardo · Enzo (suporte)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Funil de colunas na ordem da jornada</b> (reconstruído ao vivo): orçamento → resultado → alcance → impressões → frequência → CPM → cliques NO LINK → CPC → CTR → vídeo; regra: sempre "clique no link" — o clique geral conta curtida e foto.</li>
+          <li><b>Métricas personalizadas Hook e Body</b>: Hook = 3s ÷ impressões; Body = 75% ÷ 3s; formato numérico trocado para porcentagem no editor (correção do co-mentor).</li>
+          <li><b>Três pilares de otimização</b>: público, criativo e ESTRUTURA — "hoje o foco de todo mundo é criativo, mas você esquece a estrutura": a mesma campanha em vendas × leads dá custos diferentes.</li>
+          <li><b>Uma variável por vez</b>: duplicar a campeã trocando SÓ o objetivo (e ajustando orçamento).</li>
+          <li><b>Escala horizontal do campeão</b>: ~80% dos qualificados vêm do Hexa → desligar o resto, concentrar verba e duplicar variando públicos e estruturas; a validada fica intocada como PARÂMETRO; duplicatas levam "TESTE" no nome; o multiuso vira coringa de volume.</li>
+          <li><b>Hierarquia de fontes de lookalike</b>: lista de clientes &gt; site &gt; engajamento do Instagram &gt; vídeo view 75%; o perfil do Gustavo é o público mais nichado (seguidores são distribuidores).</li>
+          <li><b>Otimização por detalhamento</b>: idade (70% do resultado entre 25 e 54; eliminar 18–24), plataforma (Facebook rendendo mais) e posicionamento (feed domina).</li>
+          <li><b>Julgar campanha cedo</b>: alcance de 2.000–3.000 já diz se "pegou".</li>
+          <li><b>Replicação do campeão com IA</b>: transcrever o vídeo (Gemini) → skill "matriz criativo ads" no Claude → 5 dores × 3 ganchos × 3 corpos × 3 CTAs + 15 roteiros — "não é só achar um campeão, precisa replicar para achar novos".</li>
+          <li><b>Mapa mental como controle da esteira de testes</b> (dar OK no que já foi testado).</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Predefinição "Otimização funil completo" salva no Gerenciador;</li>
+          <li>Processo de escala do campeão em 5 passos (identificar pelo CRM → desligar fracas → duplicar com 1 variável → 7 dias → recuo se piorar);</li>
+          <li>Esteira de testes completa (estrutura, públicos, detalhamentos, região);</li>
+          <li>Fluxo de matriz criativa com IA (baixar → transcrever → matriz → gravar → testar).</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>80 qualificados em 15 dias (recorde) · custo por resultado R$ 3,95 · lead do Hexa ~R$ 3;</li>
+          <li>Verba do mês R$ 5.300 (subiu de R$ 3.300) · orçamentos comerciais R$ 9.000 → R$ 14.900;</li>
+          <li>Benchmark: 2.000–3.000 de alcance para julgar campanha.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Concentrar verba no Hexa e desligar as fracas;</li>
+          <li>Duplicar a campanha de vendas como leads (teste de estrutura);</li>
+          <li>Conectar o Instagram reserva; testar a esteira definida no mapa mental.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Bruno: reestudar módulos 4 e 5; desenhar a própria esteira em mapa mental ("fica de exercício"); subir lista para lookalike 1%;</li>
+          <li>Vanessa: acelerar o telefone/WhatsApp para o CQC; call para configurar a conta do Gustavo; rodar os testes por 7 dias e reavaliar.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Sempre quando for testar algo, você tem que só mudar uma variável."</p>
+        <p>"Lookalike bom vem de público bom."</p>
+        <p>"Não é só você achar um campeão. Agora a gente precisa replicar esse campeão para achar novos."</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E18</span><span class="e-title"><b>Auditoria de motivos de perda, CHA e o Livro Negro das Objeções</b><small>15/09/2026 · MÉTODO CAIO MARTINS</small></span><span class="e-dur">1h56</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Caio Martins (mentor) · Kelven Pimenta (co-mentor, criativos) · Vanessa Rissardo · Thiago Ramon (assumiu a máquina) · Bruno "Brunão" (tráfego) · Bruno Braz (em saída)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Como diagnosticar baixa conversão</b>: "meu papel é que vocês aprendam ao que olhar" — funil ampulheta: marketing bateu a meta (90 leads em 15 dias) → o gargalo é comercial (48 finalizados, 1 venda, 2,1%).</li>
+          <li><b>Auditoria lead a lead</b>: abrir cada perda no BI e confrontar com a conversa real do WhatsApp; achados: "saiu do segmento" que era lojista com produto Pyramid na prateleira — "o motivo de perda é o que faz o marketing corrigir a parada".</li>
+          <li><b>Livro Negro das Objeções</b>: cada vendedor anota as objeções do dia; treino semanal em cima delas.</li>
+          <li><b>CHA por objeção</b> (Conhecimento, Habilidade, Atitude): assistir 2h de vídeo dá conhecimento, não habilidade — "habilidade é mão na massa" (analogia do motor de Chevette); atitude é o único componente que o gestor não muda no outro.</li>
+          <li><b>Treino por repetição</b>: gravar o gestor contornando a objeção, subir no Drive, roleplay recorrente — "o Kelvin treina a equipe dele a mesma coisa todo sábado durante 5 anos".</li>
+          <li><b>Objeção de pedido mínimo</b>: nunca aceitar e encerrar — investigar potencial ("quantos vendedores? e se eu mandar mostruário?").</li>
+          <li><b>Cultura de vendas</b>: a crença "só distribuidor de 50 mil presta" nasce "no cafezinho"; a máquina é o processo seletivo do próximo vendedor de carteira.</li>
+          <li><b>Tirar caldo de todo lead do setor</b>: lojista fora da política → repassar ao distribuidor parceiro ("já vou passar seu contato pra Tambasa") ou usar o volume como alavanca de negociação.</li>
+          <li><b>Higiene de CRM</b>: duplicar (não retomar) o lead que volta; etapa "contato em até 30 dias" + mutirões de fechamento.</li>
+          <li><b>Criativo dirigido pelo Advantage+</b>: primeira cena de 2–3s, do peito para cima, fala pausada "Se você é distribuidor…" — "a Meta tá lendo o que você fala no vídeo"; 4 aberturas reaproveitando o corpo do campeão.</li>
+          <li><b>Teste de hipótese</b>: "se não isolar a hipótese e não souber o que olhar, o teste foi perdido" — janela de 15–30 dias medindo mídia E motivos de perda.</li>
+          <li><b>Planilha de verba semanal</b> (a dele: R$ 26 mil/mês) com campanha-mãe por exclusão de cidades; accountability: alinhar o CHA do cargo com o dono — e ao cobrar, "não entra dando chicote: a culpa é nossa de não treinar".</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Fluxo de diagnóstico de conversão (mídia → comercial → auditoria → conclusão);</li>
+          <li>Livro Negro das Objeções + CHA por objeção + roleplay com vídeo;</li>
+          <li>Funil de repescagem com automação e mutirão;</li>
+          <li>BI de carteira (faturamento × vendedor × ramo × frequência) → medidas de direção de mix.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados</h5><ul>
+          <li>90 leads em 15 dias · 48 finalizados · 10 orçamentos = R$ 33.983 · 1 venda R$ 3.360 (2,1%);</li>
+          <li>Qualificação 13% → 26% · ~R$ 2.000 gerando 80–90 leads;</li>
+          <li>ChatGPT/Google Meu Negócio: ~3.200 distribuidores em SP, 13 cidades.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Novo motivo de perda "já é cliente da carteira"; duplicar lead que retorna;</li>
+          <li>Treinamento de motivos de perda no mesmo dia;</li>
+          <li>14 vídeos regionais + 1 estático até dia 22; só a Bahia bloqueada no tráfego (golpes).</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Ramon: Livro Negro com CHA e vídeos; revisar pipeline; alinhar atitudes com Gustavo; BI com Kevin;</li>
+          <li>Bruno: gravar as 4 aberturas (peito para cima, fala pausada) e os criativos por região; público do Meta por cidade na planilha;</li>
+          <li>Nova rodada de análise de perdas em 15–30 dias para validar a hipótese.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"O motivo de perda é o que faz o marketing corrigir a parada."</p>
+        <p>"A máquina para você é um processo seletivo do seu próximo vendedor de carteira."</p>
+        <p>"A gente tem que abolir a gestão do eu acho." <b>(crédito dado ao Kelven)</b></p>
+      </div>
+    </div>
+  </details>
+
+  <details class="enc">
+    <summary><span class="e-n">E19</span><span class="e-title"><b>Estratégia de evento com geolocalização e o mês recorde</b><small>24/09/2026 · TRÁFEGO PAGO KEEPADS</small></span><span class="e-dur">0h46</span><span class="e-car">→</span></summary>
+    <div class="enc-body">
+      <div class="e-people"><b>Participantes:</b> Kelven Pimenta (mentor) · Wesley (co-mentor, revisão de tarefas no ClickUp) · Bruno (mentorado) · Vanessa Rissardo (briefing do evento) · Enzo (ClickUp)</div>
+      <div class="eb-grid">
+        <div class="eb full"><h5>principais ensinamentos</h5><ul>
+          <li><b>Estratégia de evento = funil completo por objetivo</b> (referência: "O Dilema das Redes"): o algoritmo classifica cada usuário pelo comportamento; para "aparecer para todo mundo" rodam-se simultaneamente alcance, tráfego/perfil, video view e WhatsApp (este só no quente) — cada objetivo captura um perfil.</li>
+          <li><b>Geolocalização de evento</b>: raio de 1 km no resort, com EXCLUSÃO de raio para "cair certinho"; dois tipos de alcance (normal + máxima impressão).</li>
+          <li><b>Remarketing de vídeos institucionais</b>: quem assistiu os vídeos (Imersão China, grito de guerra, depoimentos) "tá ferrado, vai aparecer para caramba".</li>
+          <li><b>Público de engajamento dos últimos 4 dias</b>: pequeno, recente e qualificado (quem pesquisou a empresa por causa do evento).</li>
+          <li><b>Conversão só no quente</b>: a campanha com CTA (marca própria) roda apenas sobre os públicos gerados pelas campanhas de cima.</li>
+          <li><b>YouTube como plus multicanal</b>: "R$ 10 já faz estrago" — vídeo horizontal adaptado, oculto no canal, canal vinculado ao Google Ads.</li>
+          <li><b>Rotina de monitoramento em evento</b>: despertador de 3 em 3 horas no primeiro dia — raio pequeno pode travar a entrega.</li>
+          <li><b>Qualificação por formulário</b>: método Keepads de 2 a 3 perguntas no formulário instantâneo.</li>
+          <li><b>Ensino socrático</b>: antes do plano, "como VOCÊ desenharia a estratégia?"; validação por mapa mental antes de subir.</li>
+          <li><b>"Pessoas conectam pessoas"</b>: o Instagram do dono gera mais interesse e leads que o da empresa.</li>
+        </ul></div>
+        <div class="eb"><h5>frameworks apresentados</h5><ul>
+          <li>Framework de campanha de evento em 9 passos (objetivo → geo → camadas → vídeos → públicos → remarketing → YouTube → monitoramento → validação);</li>
+          <li>Processo de validação por mapa mental (desenha → grupo → mentor valida → sobe);</li>
+          <li>Rotina de gestão: revisão de tarefas no ClickUp com prazos nominais abrindo o encontro.</li>
+        </ul></div>
+        <div class="eb"><h5>números citados (mês recorde)</h5><ul>
+          <li>703 conversas · <b>182 leads qualificados</b> (recorde; melhor mês anterior: 99) · taxa 25,9%;</li>
+          <li>Custo por conversa R$ 5,42 · custo por qualificado R$ 20,93;</li>
+          <li>3 vendas somando R$ 14.975 · 4º mês de projeto · 30 convidados no evento.</li>
+        </ul></div>
+        <div class="eb"><h5>decisões</h5><ul>
+          <li>Verba do evento SEPARADA da verba mensal;</li>
+          <li>Estratégia dupla: visibilidade/cultura (sem CTA) + 1 campanha CPA no quente;</li>
+          <li>Módulos 5 e 6 + aulas de IA no PDI; Claude da Pyramid conectado ao ClickUp.</li>
+        </ul></div>
+        <div class="eb full"><h5>tarefas e próximos passos</h5><ul>
+          <li>Bruno: mapa mental da estratégia na sexta para validação; campanhas no ar segunda 17h; despertador de 3 em 3h; criativos por região até terça;</li>
+          <li>Vanessa: criativos da China, endereço do resort, lista de convidados com e-mail/telefone; feedback sobre o freio do comercial levado ao Caio.</li>
+        </ul></div>
+      </div>
+      <div class="e-quotes"><h5>citações literais</h5>
+        <p>"Quando você quer aparecer num determinado evento, você trabalha muito com campanha de alcance. Eu gosto de trabalhar todo o funil."</p>
+        <p>"YouTube com R$ 10 já faz estrago."</p>
+        <p>"Pessoas conectam pessoas."</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- 5 · MAPA DE CONTEÚDO -->
+<section id="s5">
+  <div class="sec-k">/ 05 · mapa de conteúdo · análise geral</div>
+  <h2>todo o conhecimento cabe em <em>nove grandes temas</em></h2>
+  <p>Agrupando o conteúdo das 31h51 por tema (e não por reunião): os temas 1 a 4 dominam a mentoria Caio Martins; 5 a 7 dominam a de Tráfego Pago; 8 e 9 atravessam as duas.</p>
+  <ol class="seq">
+    <li><b>Produto e oferta</b> — classificação boi de piranha / filezinho / sobremesa / encalhado; curva ABC + dias sem venda; reempacotamento do encalhado como brinde; anúncio em percentual, nunca preço absoluto; "a oferta comanda, o canal é consequência"; tabelas prontas por faixa de compra ("pastinha preta").</li>
+    <li><b>Calendário e campanhas ancoradas em fato novo</b> — planilha Gama Educação; calendário nomeado até dezembro; ciclos pré → durante → pós (feira, Black) com funis sucessivos; grupo VIP de pré-venda; dobra de pedido agendada; campanhas de faixa ("Você na China"); eventos como canal de venda (preview, pitch em 5 passos); mote único desdobrado por canal.</li>
+    <li><b>Funil comercial mensurado</b> — três saídas da IA (qualificado / não qualificado / sem resposta); taxa cobrada em cada etapa; auditoria lead a lead dos motivos de perda na conversa real; teste do açougueiro; follow-up com quebra de padrão (recado de vídeo, vídeo do dono); Livro Negro das Objeções + CHA + roleplay; sair do WhatsApp rápido; pedido mínimo investigado.</li>
+    <li><b>Pós-venda e LTV</b> — 9 passos do pós-venda; dia mensal do mutirão de estoque parado com caixa de ferramentas manualizada; LTV tagueado no ERP em reais e em compras; consumidor final redirecionado ao distribuidor ("bolso direito → bolso esquerdo").</li>
+    <li><b>Meta Ads — públicos, criativos e escala</b> — públicos como "arma" (lista, engajamento, vídeo view, lookalike — "lookalike bom vem de público bom"); janela deslizante e atualização semanal; criativo como filtro; arquitetura cabeça/corpo/CTA e banco de criativos ("viver de Frankenstein"); Hook e Body; escala horizontal do campeão (parâmetro intocado, duplicatas "TESTE", coringa de volume); geolocalização por região e evento; funil completo por objetivo.</li>
+    <li><b>Google Ads e multicanal</b> — rede de pesquisa como prioridade B2B ("o cliente está na pesquisa"); palavras sempre com o nome do produto; Mercado Livre como fonte de palavras; rotina de negativação; coerência pesquisa-anúncio-página; lances em degraus; YouTube como plus barato; "o Google é o pai de todos os ads".</li>
+    <li><b>Qualificação e dados devolvidos à plataforma</b> — "gerar lead virou commodity; o produto é o lead qualificado"; lead score; PCI/persona documentados; CQC/CAPI mapeando o WhatsApp em eventos do Meta ("gestão de tráfego 2.0"); trackeamento como "mapa da jornada"; atribuição correta; venda offline devolvida mensalmente ao Meta.</li>
+    <li><b>Execução e gestão (4DX)</b> — MCI em uma frase com número e prazo; medidas de direção; placar verde/vermelho toda segunda; reunião de MCI ≤ 20 min; ClickUp com tarefa recorrente e prazo de ~7 dias; método PDI (estudar → anotar → apresentar → feedback); agenda em blocos; teste sempre com uma variável; debriefing; protocolo anti-permissividade e perfil comportamental.</li>
+    <li><b>IA aplicada à operação</b> — Claude como "segundo cérebro": projeto por cliente, instruções, skills (4DX, persona, matriz de criativos 5×3×3×3), análise semanal de CSVs, dashboards, campanha Google guiada por prints; NotebookLM; ChatGPT para levantamento de mercado; ressalvas recorrentes: sem técnica a IA "só manda coisa genérica" e automação demais tira o "feeling".</li>
+  </ol>
+  <div class="two">
+    <div class="card accent"><div class="c-tag">problemas que a mentoria busca resolver</div><ul class="detail">
+      <li>Tráfego há 2 anos sem pagar a operação;</li>
+      <li>Venda reativa ao contêiner, sem calendário;</li>
+      <li>Lead julgado no achismo, sem funil mensurado;</li>
+      <li>Dependência de terceiros (gestor externo, agência);</li>
+      <li>Execução por impulso ("bora que bora") sem placar.</li>
+    </ul></div>
+    <div class="card"><div class="c-tag">ferramentas recorrentes</div><ul class="detail">
+      <li>Planilhas: Gama Educação, famílias/ABC, verba por região, PCI, lead score;</li>
+      <li>RD Station/CRM · ClickUp · CQC/Tintim · Gerenciador Meta · Google Ads;</li>
+      <li>Claude (projetos, skills, dashboards) · NotebookLM · ChatGPT;</li>
+      <li>Caixa de ferramentas de campanhas · mangá comportamental · ERP com tag de LTV.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 6 · EVOLUÇÃO -->
+<section id="s6">
+  <div class="sec-k">/ 06 · evolução da mentoria</div>
+  <h2>os temas não se substituem — <em>empilham</em></h2>
+  <div class="two">
+    <div class="card accent"><div class="c-tag">fase 01 · mai–jun · fundação</div><p>Diagnóstico dos 2 anos sem retorno e fórmula dos 5 passos (E01); espinha dorsal com organograma, jornada, caixa de ferramentas e MCIs 4DX (E02); onboarding técnico e método PDI (E03); calendário anual de campanhas (E04). Decisão estrutural: internalizar o tráfego.</p></div>
+    <div class="card accent"><div class="c-tag">fase 02 · jun–jul · máquina</div><p>Formação técnica acelerada (E05, E07), Claude aplicado e primeira leitura do funil real (E06), liderança do projeto redefinida e MCI semanal instalada (E08), tripé de métricas e rotina do gestor (E09), Google Ads no ar (E10). Meta de qualificados: 50 → 75, batida (79).</p></div>
+    <div class="card accent"><div class="c-tag">fase 03 · ago · qualificação</div><p>Meta Ads avançado e demo do CQC (E11); funil com 3 saídas, recado de vídeo e placar com LTV (E12); fórmula do lead qualificado com lead score e CAPI (E13) — a "gestão de tráfego 2.0". Black Friday começa a ser planejada com 3 meses de antecedência.</p></div>
+    <div class="card accent"><div class="c-tag">fase 04 · set · escala e gargalo</div><p>Diagnóstico do lead desqualificado e criativo cabeça/corpo/CTA (E14); Black na metodologia com conta reversa (E15) e desdobrada por canal com matriz de produtos (E16); escala horizontal do campeão (E17); auditoria de perdas, CHA e virada cultural do comercial (E18); evento com geolocalização e mês recorde de 182 qualificados (E19).</p></div>
+  </div>
+  <div class="note"><span class="n-k">padrão de maturação</span>O produto (fase 1) vira calendário (fases 1–2), que vira máquina medida (fases 2–3), que expõe o comercial (fase 4). O papel do mentorado muda: de ouvir aula para apresentar estudo, liderar reunião de oferta e desenhar a própria esteira de testes — coerente com a promessa do Caio de <b>"transferir o método e sair do jogo"</b>. E a cadência se intensifica: a trilha de tráfego passa de quinzenal a semanal na reta da Black.</div>
+</section>
+
+<!-- 7 · MÉTODO CAIO MARTINS -->
+<section id="s7">
+  <div class="sec-k">/ 07 · método caio martins · espinha dorsal</div>
+  <h2>um sistema que parte do produto e termina <em>no placar</em></h2>
+  <p><b>Problema que o método resolve</b> (explicitado em 07/05): tráfego há quase 2 anos sem retorno, venda reativa ("o que chega no contêiner"), sem calendário, sem processo comercial mensurável, time executando por impulso. <b>Transformação buscada:</b> máquina previsível de aquisição e recompra B2B, operada por time interno autônomo, jogando "o jogo do LTV, não o de uma venda".</p>
+  <h3>Princípios fundamentais <span class="mono" style="font-size:10px;color:var(--mute-d)">(princípios recorrentes — aparecem em vários encontros)</span></h3>
+  <ul class="detail">
+    <li><b>Tudo nasce do produto</b> — "o objetivo do marketing é vender o produto"; a reunião de marketing acontece em cima da planilha de produtos; "não é o que eu vendo, é o que eu quero vender";</li>
+    <li><b>Tudo parte do cliente</b> — jornada de compra mapeada antes de campanha, criativo e orçamento ("o caminho contrário dos gurus");</li>
+    <li><b>Campanha sempre em cima de um fato novo</b> — Copa, feira, aniversário, Black, virada de tabela: sem gancho verossímil não há campanha;</li>
+    <li><b>Nunca colocar os clientes no mesmo saco</b> — funis sucessivos (pré → durante → pós): cada "não" abre o próximo funil;</li>
+    <li><b>Números, nunca achismo</b> — "a taxa é o dedo duro da sua operação"; toda ação precisa ser mensurável;</li>
+    <li><b>LTV acima da primeira venda</b> — a máquina se paga na recompra;</li>
+    <li><b>Investir no que já é forte</b> — "se seu filho é bom de matemática, bota ele em aula de matemática";</li>
+    <li><b>Manualizar para o time não raciocinar</b> — tabelas por faixa, caixa de ferramentas, scripts: "nós vendedores somos preguiçosos… deixar mastigadinho";</li>
+    <li><b>Isolar variáveis em todo teste</b> — "se não isolar a hipótese, o teste foi perdido".</li>
+  </ul>
+  <h3>Os 5 pilares <span class="mono" style="font-size:10px;color:var(--mute-d)">(a divisão em pilares é interpretação estrutural; o conteúdo de cada um foi ensinado explicitamente)</span></h3>
+  <div class="pilar"><div class="p-n">pilar 01 · diagnóstico e fundação</div><h4>Partir do cliente antes de mexer na operação</h4>
+    <p><b>Objetivo:</b> enxergar a operação antes de mudá-la. <b>Funcionamento:</b> entrevistas com clientes (questionário do "primeiro clique na internet"), organograma comercial com fluxo de leads, jornada do vendedor mapeada e cronometrada no melhor vendedor, PCI escrito em planilha, perfil comportamental do time ("mangá" — "lê essa porra todo dia").</p>
+    <p><b>Aplicação na Pyramid:</b> fórmula dos 5 passos (E01); auditoria das contas antes de definir escopo; escolha da líder do projeto por perfil, não por conhecimento (E08); protocolo anti-permissividade para quem não executa.</p></div>
+  <div class="pilar"><div class="p-n">pilar 02 · produto primeiro</div><h4>Decidir o que vender e como empacotar</h4>
+    <p><b>Objetivo:</b> a campanha nasce da prateleira, não da ideia criativa. <b>Funcionamento:</b> planilha por família com estoque, custo, margem, curva ABC e dias sem venda; classificação mensal em <b>boi de piranha</b> (produto notável que compra o lead — o disco), <b>filezinho</b> (margem boa, venda casada — serra-copo), <b>sobremesa</b> (massa de margem por unidade — serra 350mm) e <b>encalhado</b> (reempacotado como brinde ou queima).</p>
+    <p><b>Exemplos das mentorias:</b> chave de teste de R$ 9 virando brinde escalonado (E04); kits com máquinas paradas viram "primeira compra ganha Makita" (E12); matriz por perfil da Black preenchida ao vivo (E16); anúncio em percentual ("até 70% off"), nunca preço absoluto.</p></div>
+  <div class="pilar"><div class="p-n">pilar 03 · calendário ancorado em fato novo</div><h4>Eliminar o improviso</h4>
+    <p><b>Objetivo:</b> "como vou treinar um time de uma ação que você acabou de criar?" <b>Funcionamento:</b> planilha Modelo Gama Educação (meta, verba, nome, justificativa, produtos por classe, criativos, copy, ações semanais, endomarketing); calendário nomeado até dezembro; estrutura do mês (ativação → dia P → manutenção → fechamento); campanhas trimestrais para negócio de recompra; mote único desdobrado por canal (carteira × máquina) para um canal não queimar o outro.</p>
+    <p><b>Exemplos:</b> o calendário jun–dez inteiro (E04: Hexa em 6×, preview de fábrica, Semana do Cliente, pré-Black com grupo VIP, dobra de pedido, "Você na China", boleto esticadinho); Black criada primeiro e adaptada para a Semana do Cliente (E12); pitch de evento em 5 passos — fragilização, clube de compras por contêiner, dono junto, rebate, escassez (E16).</p></div>
+  <div class="pilar"><div class="p-n">pilar 04 · máquina comercial mensurada</div><h4>Transformar lead em recompra com processo, não com heroísmo</h4>
+    <p><b>Objetivo:</b> nenhum lead invisível, nenhuma perda sem causa. <b>Funcionamento:</b> funil com as três saídas da IA (qualificado / não qualificado / sem resposta) e taxa cobrada em cada etapa; auditoria lead a lead dos motivos de perda lendo a conversa real ("o motivo de perda é o que faz o marketing corrigir a parada"); teste do açougueiro para separar problema de mídia de problema de qualificação; follow-up como "enchição de saco" com quebras de padrão (recado de vídeo nominal, vídeo do dono para inativos); Livro Negro das Objeções + CHA com roleplay recorrente; pedido mínimo investigado; pós-venda em 9 passos, mutirão mensal de estoque parado com caixa manualizada; LTV tagueado no ERP; videochamada no fechamento como defesa de crédito.</p>
+    <p><b>Rotinas recomendadas:</b> 30 min/dia de recados de vídeo; treino semanal de objeções; mutirões por faixa; repescagem com automação; máquina como processo seletivo do próximo vendedor de carteira.</p></div>
+  <div class="pilar"><div class="p-n">pilar 05 · execução 4dx</div><h4>Garantir que o planejado aconteça "faça sol, faça chuva"</h4>
+    <p><b>Objetivo:</b> ritmo e cobrança sem depender de memória. <b>Funcionamento:</b> MCI em uma frase (número de partida, chegada e prazo — marketing = 1.000 pedidos, não leads, para "acabar com mimimi"); medidas de direção; placar meta/real/esperado em verde/vermelho publicado toda segunda; reunião de MCI ≤ 20 minutos; agenda em blocos com dias temáticos e 2h de planejamento no domingo; ciclo tarefa → evento com endomarketing → rotina → medida de direção; debriefing pós-campanha; ciclo trimestral de feedback; ritual de encerramento de toda mentoria ("ponto mais importante + o que você aplica hoje").</p></div>
+  <h3>Sequência lógica de aplicação</h3>
+  <div class="flow"><span>diagnóstico</span><i>→</i><span>produto classificado</span><i>→</i><span>calendário nomeado</span><i>→</i><span>campanha por canal</span><i>→</i><span>execução com funil e taxas</span><i>→</i><span>placar e debriefing</span><i>→</i><span>ciclo seguinte</span><i>↺</i></div>
+  <div class="two">
+    <div class="card accent"><div class="c-tag">indicadores observados</div><ul class="detail">
+      <li>Taxa entre cada etapa (conversas → qualificados → orçamentos → vendas);</li>
+      <li>Custo por lead qualificado · ticket médio · conversão por vendedor;</li>
+      <li>Cobertura de carteira (50%) · ROI de mídia (baliza: "ROI 10 é a média; abaixo tá muito ruim");</li>
+      <li>LTV em reais e em nº de compras · dias sem venda por produto.</li>
+    </ul></div>
+    <div class="card"><div class="c-tag">critérios de decisão</div><ul class="detail">
+      <li>Escala só com curva comprovada ("botou 2, saiu 20; se botar 4, sai 40?");</li>
+      <li>Teste com uma variável isolada e janela de 15–30 dias;</li>
+      <li>Campanha nova nunca mexe no campeão;</li>
+      <li>A MCI blinda contra ideias fora da meta ("contribui com a MCI? então vai ser feito").</li>
+    </ul></div>
+  </div>
+  <div class="king"><span class="k-pre">erros que o método busca evitar (explicitados pelo mentor)</span>Vender só o que chega no contêiner · campanha sem fato novo · dois canais com preços conflitantes ("dá pau") · anunciar preço absoluto que expõe margem · prometer o que não cumpre (<b>"eu não falo mentira no marketing, depois você se fode"</b>) · julgar mídia sem auditar o comercial · ação sem mensuração · salvar o mês fraco em vez de dobrar o forte · assumir a entrega física de prêmios · permissividade com quem não executa.</div>
+</section>
+
+<!-- 8 · MÉTODO TRÁFEGO PAGO -->
+<section id="s8">
+  <div class="sec-k">/ 08 · método de tráfego pago · keepads · espinha dorsal</div>
+  <h2>formar o gestor interno que entrega <em>lead qualificado</em></h2>
+  <p><b>Problema que o método resolve:</b> dependência de gestor terceirizado sem resultado, conta sem processo, leads julgados no achismo — "gerar lead virou commodity". <b>Transformação buscada:</b> um gestor interno formado, operando uma máquina que entrega <b>lead qualificado</b> — não clique, não conversa — com rotina, dados e escala.</p>
+  <h3>Princípios fundamentais <span class="mono" style="font-size:10px;color:var(--mute-d)">(princípios recorrentes)</span></h3>
+  <ul class="detail">
+    <li><b>Lead qualificado é o produto</b> — "em vez de vender gestão de tráfego, eu vendo lead qualificado"; o campeão se define no CRM, não no Gerenciador;</li>
+    <li><b>O anúncio é filtro, não ímã</b> — qualificar no primeiro segundo ("se você é distribuidor…");</li>
+    <li><b>Uma variável por vez</b> — testes "na mesma temperatura e pressão";</li>
+    <li><b>Proteger o campeão</b> — validado vira parâmetro de comparação e coringa de volume;</li>
+    <li><b>Toda métrica em três leituras</b> — quantidade, taxa e custo, em três camadas (campanha, conjunto, criativo);</li>
+    <li><b>Olhar o funil completo</b> — "se a gente não olhar o funil completo, o tráfego é demitido";</li>
+    <li><b>Gestão de tráfego é executar tarefa</b> — "coisas simples, só que um monte de coisa simples";</li>
+    <li><b>Público é uma das principais armas</b> — e "lookalike bom vem de público bom".</li>
+  </ul>
+  <h3>Os 6 pilares <span class="mono" style="font-size:10px;color:var(--mute-d)">(a divisão em pilares é interpretação estrutural; o conteúdo foi ensinado explicitamente)</span></h3>
+  <div class="pilar"><div class="p-n">pilar 01 · formação do gestor interno (pdi)</div><h4>Estudar → anotar → apresentar → feedback</h4>
+    <p><b>Funcionamento:</b> trilha de cursos (Sobral/Subido = técnico; Gianini = estratégico — "apertar botão E aprender a pensar"), com apresentação do estudo em toda mentoria e arguição do mentor; "um braço estudando, outro praticando" — teoria sem campanha no ar não vale. É como a Keepads treina os próprios gestores; a apresentação revela quem não estudou.</p></div>
+  <div class="pilar"><div class="p-n">pilar 02 · fundação de dados e ativos</div><h4>A inteligência fica na conta do dono</h4>
+    <p><b>Funcionamento:</b> cadeia de ativos montada no perfil do dono, nunca na BM da agência ("eu fico com a inteligência do que você pagou"); pixel e trackeamento desde o início ("o mapa da jornada" — "o cara te acha pelo Google, mas fecha pelo Instagram"); lista de clientes rica (com data de nascimento) devolvida mensalmente ao Meta; públicos construídos e atualizados semanalmente (engajamento por janela, vídeo por percentual, lookalike da lista); persona e briefing documentados como insumo da IA; base de dados tratada como ativo ("senão vira passivo").</p></div>
+  <div class="pilar"><div class="p-n">pilar 03 · funil de métricas e diagnóstico</div><h4>Colunas que espelham a jornada</h4>
+    <p><b>Funcionamento:</b> colunas personalizadas na ordem da jornada (orçamento → resultado → alcance → impressões → frequência → CPM → cliques NO LINK → CPC → CTR → vídeo); métricas personalizadas <b>Hook</b> (3s ÷ impressões) e <b>Body</b> (75% ÷ 3s); funis separados por objetivo (WhatsApp × criativo); tripé quantidade-taxa-custo em tudo; CSV semanal analisado no Claude com 3 meses de histórico; benchmarks próprios da conta (na Pyramid: conversa R$ 2–4, qualificado ~R$ 40–50); alertas do Meta são referência, não veredito.</p></div>
+  <div class="pilar"><div class="p-n">pilar 04 · lead qualificado e devolução de dados ("gestão de tráfego 2.0")</div><h4>O Meta precisa saber quem é bom</h4>
+    <p><b>Funcionamento:</b> lead qualificado definido com o comercial via lead score (5 tipos de pergunta; &lt;30 desqualifica, &gt;70 atendimento em &lt; 30 min; quanto mais perguntas, menor a conversão); CQC mapeando o funil do WhatsApp em eventos do Meta (Lead → View Content → Add to Cart → Initiate Checkout → Purchase) disparados por palavras-chave padronizadas; atribuição correta (QR code; FBCLID/GCLID — API mal conectada vira "orgânico"); daí nascem lookalikes de quem agenda e remarketing por etapa; formulário com 2–3 perguntas quando o lead chega desqualificado; leitura do funil completo até venda e LTV para o tráfego provar valor (case Júlio: metade dos leads, resultado maior).</p></div>
+  <div class="pilar"><div class="p-n">pilar 05 · teste e escala disciplinados</div><h4>Três alavancas: público, criativo e estrutura</h4>
+    <p><b>Funcionamento:</b> "todo mundo esquece a estrutura" — a mesma campanha em vendas × leads dá custos diferentes; esteira de testes desenhada em mapa mental e validada antes de subir; escala horizontal do campeão (duplicar variando público/região/estrutura, nunca saturar o mesmo público); verba por engenharia reversa do custo histórico do qualificado, em degraus (50 → 80, nunca 50 → 300 — "dobrar verba não dobra lead"); janela de 7 dias com gatilho de recuo; todo teste custa "R$ 6 por dia e um sonho"; detalhamento por idade, plataforma e posicionamento como fonte de otimização; criativos: matriz de replicação com IA (5 dores × 3 ganchos × 3 corpos × 3 CTAs), cabeças por região, primeira cena falando com o público-alvo ("a Meta lê o que você fala no vídeo").</p></div>
+  <div class="pilar"><div class="p-n">pilar 06 · rotina, gestão e ia</div><h4>Executar tarefa é o método</h4>
+    <p><b>Funcionamento:</b> ClickUp com responsável, prazo (~7 dias) e recorrência — a revisão de tarefas abre toda mentoria; otimização e atualização de públicos semanais; rotina de negativação no Google (10–15 min); agenda em blocos, máximo ~9 reuniões/semana, regra dos 2 minutos; Claude como copiloto (projeto por cliente com ~30% de contexto, skills, dashboards, campanha guiada por prints) — com o contrapeso explícito: "entra na porra do gerenciador, puxa o CSV", senão o gestor perde o feeling.</p></div>
+  <h3>Itens investigados × o que aparece de fato no conteúdo</h3>
+  <p>Do roteiro de investigação, aparecem com força: <b>diagnóstico</b> (auditoria de conta ao vivo), <b>estrutura de campanhas, públicos, criativos, copy</b> (ganchos, CTA, camuflado × explícito), <b>orçamento</b> (engenharia reversa e degraus), <b>métricas, otimização, testes, escala, rotina operacional e tomada de decisão</b>. <b>Relatórios formais quase não aparecem</b> como tema — a prestação de contas é o placar semanal e o dashboard; <b>planejamento anual de mídia</b> também não é tratado à parte: ele herda o calendário de campanhas do método Caio Martins.</p>
+  <div class="king"><span class="k-pre">erros que o método combate (explicitados)</span>Comunicação de público quente para público frio ("jogar dinheiro fora") · campanha Brasil com verba pequena ("o Meta come seu dinheiro") · rodar na BM da agência · mexer no criativo campeão · julgar campanha só pelo CPL ou pelo aviso do Gerenciador · misturar variáveis no teste · aprimoramentos automáticos ligados · atribuição quebrada (QR code × API) · automatizar tanto que se perde o domínio da ferramenta.</div>
+</section>
+
+<!-- 9 · CONEXÃO -->
+<section id="s9">
+  <div class="sec-k">/ 09 · conexão entre os dois métodos</div>
+  <h2>divisão de trabalho explícita, <em>princípios idênticos</em></h2>
+  <p>As duas mentorias não são programas paralelos: formam um único sistema. Caio define <b>o que e para quem vender</b> (oferta, calendário, comercial); a Keepads define <b>como distribuir e medir</b> (mídia, qualificação, rotina). A integração é operacional: Kelven é co-mentor nas sessões do Caio desde o primeiro encontro, Caio entra nas de tráfego (Black, criativos com CTA), a planilha de regiões de um vira segmentação de campanha do outro e o feedback do comercial volta ao tráfego.</p>
+  <ol class="seq">
+    <li><b>Dados acima de achismo</b> — "a taxa é o dedo duro da operação" (Caio) e "abolir a gestão do eu acho" (frase que o próprio Caio credita ao Kelven); toda discussão começa abrindo o funil e as conversas reais.</li>
+    <li><b>Funil completo de ponta a ponta</b> — os dois recusam métricas isoladas: Caio audita do anúncio ao motivo de perda; Kelven ensina que sem o funil completo "o tráfego é demitido".</li>
+    <li><b>Teste com variável isolada</b> — "se não isolar a hipótese, o teste foi perdido" (Caio) e "muda uma variável só" (Kelven): a mesma regra dita pelos dois mentores.</li>
+    <li><b>Proteger o que funciona</b> — campanha campeã intocada (Kelven) e "quanto menos mexer na carteira, mais aumenta a venda" / investir no mês forte (Caio).</li>
+    <li><b>Segmentação e especificidade</b> — "quanto mais específico, menor o CAC" (Caio) e criativo-filtro por PCI e região (Kelven), com a planilha de cidades construída em conjunto.</li>
+    <li><b>Qualificação como elo</b> — o PCI do Caio é o lead score do Kelven: a mesma pergunta ("quem é o cliente ideal e como reconhecê-lo cedo?") atacada pelo alinhamento comercial de um lado e pela devolução de dados à plataforma do outro.</li>
+    <li><b>LTV como métrica-mãe</b> — "o jogo é o LTV" (Caio) e escala decidida por recorrência, não por CPL (Kelven).</li>
+    <li><b>Execução 4DX e gestão por tarefas</b> — MCI, placar e reunião semanal (Caio) espelham o ClickUp com recorrência e prazo de 7 dias (Keepads); ambos abrem toda sessão revisando tarefas e ensinam fazendo ("dar muita tarefa é a minha forma de ensinar e a do Kel").</li>
+    <li><b>IA como copiloto com domínio humano</b> — os dois usam Claude para placar, análise e criativos, com o mesmo alerta: sem conhecimento técnico, a IA "só manda coisa genérica".</li>
+    <li><b>Manualizar e transferir</b> — caixa de ferramentas, tabelas por faixa e scripts (Caio) têm a mesma lógica das nomenclaturas, checklists e esteiras (Keepads): tirar o método da cabeça das pessoas e pôr no processo.</li>
+  </ol>
+</section>
+
+<!-- 10 · FRAMEWORK GERAL -->
+<section id="s10">
+  <div class="sec-k">/ 10 · framework geral pyramid</div>
+  <h2>do produto ao LTV, sobre <em>uma base de execução</em></h2>
+  <p><b>Objetivo do sistema:</b> máquina previsível de aquisição e recompra de clientes B2B.</p>
+  <div class="two">
+    <div class="card accent"><div class="c-tag">pilar 1 · oferta e calendário</div><h4>Produto primeiro</h4><p>Classificação mensal do estoque (boi de piranha / filé / sobremesa / encalhado), campanha ancorada em fato novo e mote único desdobrado por canal. <span class="mono" style="font-size:10px">→ MÉTODO CAIO MARTINS</span></p></div>
+    <div class="card accent"><div class="c-tag">pilar 2 · máquina de tráfego</div><h4>Criativo como filtro</h4><p>Públicos como arma, funil de métricas, teste de uma variável por vez e escala horizontal do campeão. <span class="mono" style="font-size:10px">→ MÉTODO KEEPADS</span></p></div>
+    <div class="card accent"><div class="c-tag">pilar 3 · comercial e ltv</div><h4>Funil com taxas</h4><p>Motivos de perda auditados, objeções treinadas (CHA), pós-venda e recompra como jogo real. <span class="mono" style="font-size:10px">→ ELO ENTRE AS TRILHAS</span></p></div>
+    <div class="card"><div class="c-tag">base transversal</div><h4>Execução, dados e IA</h4><p>Execução 4DX (MCI, placar, reunião semanal, tarefas com prazo) · dados devolvidos às plataformas (CQC/CAPI, venda offline) · IA como copiloto (Claude e ClickUp).</p></div>
+  </div>
+  <h3>Ciclo operacional em 8 passos <span class="mono" style="font-size:10px;color:var(--mute-d)">(interpretação estrutural fiel à cronologia ensinada)</span></h3>
+  <div class="flow"><span>diagnóstico</span><i>→</i><span>produto e oferta</span><i>→</i><span>calendário</span><i>→</i><span>distribuição</span><i>→</i><span>qualificação</span><i>→</i><span>conversão</span><i>→</i><span>recompra</span><i>→</i><span>correção</span><i>↺</i></div>
+  <p>O ciclo é retroalimentado: o resultado do comercial — motivos de perda, LTV, objeções reais — volta para corrigir a oferta e o criativo do ciclo seguinte. Foi exatamente o que aconteceu no período: a máquina bateu recorde (182 qualificados), a leitura do funil expôs a conversão de 2,1%, e a correção (auditoria de perdas, CHA, virada cultural) virou pauta das mentorias seguintes.</p>
+</section>
+
+<!-- 11 · CONCLUSÕES -->
+<section id="s11">
+  <div class="sec-k">/ 11 · conclusões</div>
+  <h2>metodologia madura; <em>documentação é a próxima fronteira</em></h2>
+  <p><b>Principais aprendizados.</b> O maior valor da mentoria não está em táticas isoladas, mas na inversão de lógica: partir do produto e do cliente (não da ideia), medir taxa em cada elo (não volume), tratar lead qualificado — e não lead — como produto do marketing, e sustentar tudo com ritmo de execução. Os resultados do período validam o arco: qualificados de ~50/mês para 182/mês, custo por conversa caindo, e o gargalo migrando da mídia para a conversão comercial — exatamente o que o método previa expor.</p>
+  <p><b>Maturidade atual.</b> Alta nos dois núcleos: o método Caio é testado há anos na própria loja dele (planilhas, campanhas e números próprios mostrados ao vivo) e o método Keepads tem processos nomeados, benchmarks próprios e casos reais de outros clientes como prova. A aplicação na Pyramid está em maturação: a máquina de mídia funciona; a conversão comercial e a cultura do time são o capítulo em aberto.</p>
+  <div class="two">
+    <div class="card accent">
+      <div class="c-tag">conteúdos já bem estruturados (prontos para playbook)</div>
+      <ul class="detail">
+        <li>Classificação de produtos e empacotamento da oferta;</li>
+        <li>Planilha Gama Educação + calendário anual de campanhas;</li>
+        <li>Funil de métricas (quantidade · taxa · custo, Hook/Body);</li>
+        <li>Método PDI de formação e 4DX aplicado (MCI, placar, reunião);</li>
+        <li>Esteira de testes e escala do campeão;</li>
+        <li>Auditoria de motivos de perda · CHA + Livro Negro das Objeções.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="c-tag">conteúdos ainda dispersos</div>
+      <ul class="detail">
+        <li>Definição final de lead qualificado e lead score (em construção com o comercial);</li>
+        <li>Atribuição ponta a ponta do WhatsApp (CQC em implantação; 4 números não unificados);</li>
+        <li>Regras de canal máquina × carteira (definidas, não consolidadas em documento);</li>
+        <li>Política comercial — pagamento à vista e pedido mínimo como gargalo recorrente em pelo menos 4 encontros;</li>
+        <li>Mensuração das ações fora da mídia (IA não marca origem);</li>
+        <li>DRE/LTV vs ROI de mídia (adiado para o financeiro).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="king"><span class="k-pre">oportunidades de documentação futura</span>(1) Playbook vivo de campanhas a partir da caixa de ferramentas, com resultados · (2) calendário anual como template reutilizável (pré/durante/pós por evento) · (3) manual do gestor de tráfego Pyramid (funil de colunas, nomenclatura, esteira de testes, rotina semanal) · (4) documento oficial de <b>PCI + lead score + palavras-chave do CQC</b> · (5) Livro Negro das Objeções com vídeos de treino no Drive · (6) política comercial escrita (canais, exclusividades, condições) · (7) biblioteca de skills de IA da operação (matriz de criativos, persona, placar 4DX) — já iniciada nas próprias mentorias.</div>
+</section>
+
+<div class="foot">
+  FONTES: 21 transcrições integrais das reuniões "Mentoria Pyramed/Pyramid" (tldv, 07/05–24/09/2026), lidas na íntegra. Durações medidas pela plataforma de gravação — nenhuma estimada. Citações entre aspas são falas literais dos mentores. Os rótulos de falante das transcrições contêm trocas de conta (ex.: Caio Martins aparece como "Galpão Casa e Construção"), corrigidas pelo conteúdo das falas. Classificação de cada afirmação: ensinado explicitamente · princípio recorrente · interpretação estrutural (sempre sinalizada). · GAMMA EDUCAÇÃO · SET/2026
+</div>
+
+</main>
+<script>
+window.addEventListener('beforeprint',function(){document.querySelectorAll('details.enc').forEach(function(d){d.open=true;});});
+</script>
+</body>
+</html>
